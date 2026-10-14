@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% block title %}{% translate "Register" %} — {{ SITE_NAME }}{% endblock %}
+{% block content %}
+<section class="section">
+    <div class="container auth-card-wrap">
+        <div class="card-panel auth-card">
+            <h1>{% translate "Create your account" %}</h1>
+            <p class="muted">{% translate "Optional — you can always generate wishes as a guest. An account lets you save birthdays, wishes and reminders." %}</p>
+            {% if form.non_field_errors %}<div class="alert alert-danger">{{ form.non_field_errors }}</div>{% endif %}
+            <form method="post" novalidate>
+                {% csrf_token %}
+                {% with field=form.username %}{% include "partials/_field.html" %}{% endwith %}
+                <div class="row g-3">
+                    <div class="col-md-6">{% with field=form.first_name %}{% include "partials/_field.html" %}{% endwith %}</div>
+                    <div class="col-md-6">{% with field=form.email %}{% include "partials/_field.html" %}{% endwith %}</div>
+                </div>
+                {% with field=form.password1 %}{% include "partials/_field.html" %}{% endwith %}
+                {% with field=form.password2 %}{% include "partials/_field.html" %}{% endwith %}
+                <button class="btn btn-primary paveline-btn w-100" type="submit">{% translate "Create account" %}</button>
+            </form>
+            <p class="auth-alt">{% translate "Already have an account?" %} <a href="{% url 'accounts:login' %}">{% translate "Login" %}</a></p>
+        </div>
+    </div>
+</section>
+{% endblock %}

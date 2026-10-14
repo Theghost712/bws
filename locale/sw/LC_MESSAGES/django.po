@@ -1,0 +1,829 @@
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: paveline\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: \n"
+"Last-Translator: Paveline\n"
+"Language-Team: sw\n"
+"Language: sw\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+msgid "{{ days }} day"
+msgid_plural "{{ days }} days"
+msgstr[0] "Siku {{ days }}"
+msgstr[1] "Siku {{ days }}"
+
+msgid "Card designer"
+msgstr "Mbunifu wa kadi"
+
+msgid "Make it yours"
+msgstr ""
+
+msgid "Birthday card designer"
+msgstr "Mbunifu wa kadi za siku ya kuzaliwa"
+
+msgid ""
+"Choose a design, write your message and download a PNG. No account needed."
+msgstr ""
+
+msgid "Preview"
+msgstr "Onyesho"
+
+msgid "Download PNG"
+msgstr "Pakua PNG"
+
+msgid "Your card preview will appear here."
+msgstr "Onyesho la kadi yako litaonekana hapa."
+
+msgid "Card preview"
+msgstr "Onyesho la kadi"
+
+msgid "Birthday card gallery"
+msgstr "Matunzio ya kadi za siku ya kuzaliwa"
+
+msgid "Designs for every feeling"
+msgstr "Miundo kwa kila hisia"
+
+msgid "Pick a template, add your words and download a ready-to-share card."
+msgstr ""
+
+msgid "All"
+msgstr "Zote"
+
+msgid "Happy birthday!"
+msgstr "Heri ya siku ya kuzaliwa!"
+
+msgid "Wishing you a day as lovely as you are."
+msgstr ""
+
+msgid "Use this design"
+msgstr "Tumia muundo huu"
+
+msgid "No templates here yet"
+msgstr ""
+
+msgid "Saved wish"
+msgstr "Pongezi iliyohifadhiwa"
+
+msgid "Remove favourite"
+msgstr "Ondoa kwenye vipendwa"
+
+msgid "Add to favourites"
+msgstr "Ongeza kwenye vipendwa"
+
+msgid "Edit note"
+msgstr "Hariri dokezo"
+
+msgid "A DAY AS LOVELY AS YOU"
+msgstr ""
+
+msgid "Copy wish"
+msgstr "Nakili pongezi"
+
+msgid "WhatsApp"
+msgstr "WhatsApp"
+
+msgid "Make a card"
+msgstr "Tengeneza kadi"
+
+msgid "Your note"
+msgstr "Dokezo lako"
+
+msgid "No note yet."
+msgstr ""
+
+msgid "Delete this wish?"
+msgstr ""
+
+msgid "Delete wish"
+msgstr ""
+
+msgid "Notes are private to you."
+msgstr ""
+
+msgid "Save note"
+msgstr "Hifadhi dokezo"
+
+msgid "Cancel"
+msgstr "Ghairi"
+
+msgid "Favourite wishes"
+msgstr "Pongezi zipendwa"
+
+msgid "Starred"
+msgstr ""
+
+msgid "All saved wishes"
+msgstr "Pongezi zote zilizohifadhiwa"
+
+msgid "No favourites yet"
+msgstr "Hakuna vipendwa bado"
+
+msgid "Star a saved wish to find it here quickly."
+msgstr "Weka nyota kwenye pongezi iliyohifadhiwa ili kuipata hapa haraka."
+
+msgid "Browse saved wishes"
+msgstr "Vinjari pongezi zilizohifadhiwa"
+
+msgid "Your birthday wish"
+msgstr "Pongezi yako ya siku ya kuzaliwa"
+
+msgid "Step 2 — your card"
+msgstr ""
+
+msgid "Here is your wish"
+msgstr "Hii hapa pongezi yako"
+
+msgid "Their birthday is today!"
+msgstr ""
+
+msgid "Another version"
+msgstr "Toleo lingine"
+
+msgid "Share"
+msgstr "Shiriki"
+
+msgid "Design a card"
+msgstr "Buni kadi"
+
+msgid "Save this wish"
+msgstr "Hifadhi pongezi hii"
+
+msgid "Register to save wishes"
+msgstr "Jisajili ili kuhifadhi pongezi"
+
+msgid "More ideas"
+msgstr "Mawazo zaidi"
+
+msgid "Use this version"
+msgstr "Tumia toleo hili"
+
+msgid "Send it their way"
+msgstr ""
+
+msgid ""
+"Copy the wish, share it on WhatsApp, or use your device's share sheet. "
+"Sharing needs no account from the recipient."
+msgstr ""
+
+msgid "Create another wish"
+msgstr "Tengeneza pongezi nyingine"
+
+msgid "Saved wishes"
+msgstr "Pongezi zilizohifadhiwa"
+
+msgid "Your collection"
+msgstr "Mkusanyiko wako"
+
+msgid "Create a wish"
+msgstr "Tengeneza pongezi"
+
+msgid "All languages"
+msgstr "Lugha zote"
+
+msgid "Filter"
+msgstr "Chuja"
+
+msgid "No saved wishes yet"
+msgstr "Hakuna pongezi zilizohifadhiwa bado"
+
+msgid "Generate a wish and save it to build your collection."
+msgstr ""
+
+msgid "Create your first wish"
+msgstr "Tengeneza pongezi yako ya kwanza"
+
+msgid "Search by recipient…"
+msgstr "Tafuta kwa mpokeaji…"
+
+msgid "Favourite"
+msgstr "Kipendwa"
+
+msgid "Create a birthday wish"
+msgstr "Tengeneza pongezi ya siku ya kuzaliwa"
+
+msgid "The details"
+msgstr "Maelezo"
+
+msgid ""
+"Fill in what you know. Everything is optional except the choices — we will "
+"handle the words."
+msgstr ""
+
+msgid "Who is it for?"
+msgstr "Ni kwa nani?"
+
+msgid "The message"
+msgstr "Ujumbe"
+
+msgid "Birthday date"
+msgstr ""
+
+msgid "optional"
+msgstr "hiari"
+
+msgid ""
+"The date lets us tailor the wish and tell you if it is today. The year is "
+"optional — we never guess an age without it."
+msgstr ""
+
+msgid "Generate wish"
+msgstr "Tengeneza pongezi"
+
+msgid "Upcoming birthdays"
+msgstr "Siku za kuzaliwa zinazokuja"
+
+msgid "Next 90 days"
+msgstr "Siku 90 zijazo"
+
+msgid "All birthdays"
+msgstr "Siku zote za kuzaliwa"
+
+msgid "Today"
+msgstr "Leo"
+
+msgid "Wish now"
+msgstr ""
+
+msgid "turning"
+msgstr "anafikisha"
+
+msgid "Wish"
+msgstr ""
+
+msgid "Nothing coming up"
+msgstr "Hakuna linalokuja"
+
+msgid "No birthdays in the next 90 days."
+msgstr "Hakuna siku za kuzaliwa katika siku 90 zijazo."
+
+msgid "Add a birthday"
+msgstr "Ongeza siku ya kuzaliwa"
+
+msgid "Birthday details"
+msgstr ""
+
+msgid "Edit"
+msgstr "Hariri"
+
+msgid "Delete this birthday?"
+msgstr ""
+
+msgid "Delete"
+msgstr "Futa"
+
+msgid "Birthday"
+msgstr "Siku ya kuzaliwa"
+
+msgid "Today!"
+msgstr "Leo!"
+
+msgid "Days to go"
+msgstr "Siku zilizosalia"
+
+msgid "Turning"
+msgstr "Anafikisha"
+
+msgid "Notes"
+msgstr "Madokezo"
+
+msgid "Set a reminder"
+msgstr ""
+
+msgid "My birthdays"
+msgstr "Siku zangu za kuzaliwa"
+
+msgid "Birthday manager"
+msgstr "Kidhibiti cha siku za kuzaliwa"
+
+msgid "Saved birthdays"
+msgstr "Siku za kuzaliwa zilizohifadhiwa"
+
+msgid "Upcoming"
+msgstr "Zinazokuja"
+
+msgid "Add birthday"
+msgstr "Ongeza siku ya kuzaliwa"
+
+msgid "All relationships"
+msgstr "Uhusiano wote"
+
+msgid "Sort: name"
+msgstr "Panga: jina"
+
+msgid "Sort: recently added"
+msgstr "Panga: zilizoongezwa hivi karibuni"
+
+msgid "Apply"
+msgstr ""
+
+msgid "Name"
+msgstr "Jina"
+
+msgid "Date"
+msgstr "Tarehe"
+
+msgid "Relationship"
+msgstr "Uhusiano"
+
+msgid "No birthdays saved yet"
+msgstr "Hakuna siku za kuzaliwa zilizohifadhiwa"
+
+msgid "Add the people you never want to forget."
+msgstr ""
+
+msgid "Add your first birthday"
+msgstr "Ongeza siku yako ya kuzaliwa ya kwanza"
+
+msgid "Search name or notes…"
+msgstr "Tafuta jina au madokezo…"
+
+msgid "Edit birthday"
+msgstr "Hariri siku ya kuzaliwa"
+
+msgid "Save birthday"
+msgstr "Hifadhi siku ya kuzaliwa"
+
+msgid "Dashboard"
+msgstr "Dashibodi"
+
+msgid "Your dashboard"
+msgstr "Dashibodi yako"
+
+msgid "Welcome back"
+msgstr "Karibu tena"
+
+msgid "Favourites"
+msgstr "Vipendwa"
+
+msgid "Active reminders"
+msgstr ""
+
+msgid "Today & upcoming"
+msgstr ""
+
+msgid "View all"
+msgstr ""
+
+msgid "No upcoming birthdays yet."
+msgstr "Hakuna siku za kuzaliwa zinazokuja bado."
+
+msgid "Add one"
+msgstr ""
+
+msgid "Recent wishes"
+msgstr "Pongezi za hivi karibuni"
+
+msgid "You have not saved any wishes yet."
+msgstr ""
+
+msgid "Create one"
+msgstr ""
+
+msgid "Privacy Policy"
+msgstr "Sera ya Faragha"
+
+msgid "Your privacy matters."
+msgstr ""
+
+msgid ""
+"This policy explains what Paveline stores and why. It is written plainly on "
+"purpose."
+msgstr ""
+
+msgid "Generating wishes as a guest"
+msgstr "Kutengeneza pongezi kama mgeni"
+
+msgid ""
+"When you generate a wish without an account, your recipient's details are "
+"used only for that request and are not stored in our database. The wish text"
+" is generated from local templates."
+msgstr ""
+
+msgid "If you create an account"
+msgstr ""
+
+msgid ""
+"We store the account details you provide, plus any birthdays, wishes, "
+"favourites or reminders you choose to save. This data is visible only to you"
+" and is never shown on public pages."
+msgstr ""
+
+msgid "Uploaded images"
+msgstr ""
+
+msgid ""
+"Photos you upload while designing a card are used solely to render that "
+"card. They are not shared with other users."
+msgstr ""
+
+msgid "Contact"
+msgstr "Wasiliana"
+
+msgid ""
+"For any privacy request, please use the contact page and we will respond."
+msgstr ""
+
+msgid "Terms of Service"
+msgstr "Masharti ya Huduma"
+
+msgid "Terms of use"
+msgstr ""
+
+msgid "By using Paveline you agree to use it responsibly and lawfully."
+msgstr ""
+
+msgid "Your content"
+msgstr ""
+
+msgid ""
+"You are responsible for the content you create and share. Do not use the "
+"service to send harmful, abusive or unlawful messages."
+msgstr ""
+
+msgid "Accounts"
+msgstr ""
+
+msgid ""
+"Keep your login details secure. You are responsible for activity on your "
+"account."
+msgstr ""
+
+msgid "Availability"
+msgstr ""
+
+msgid ""
+"Paveline is provided as-is. Features may change as the service improves."
+msgstr ""
+
+msgid "We would love to hear from you."
+msgstr ""
+
+msgid ""
+"Questions, ideas or feedback? Send us a message and we will get back to you."
+msgstr ""
+
+msgid "Send message"
+msgstr "Tuma ujumbe"
+
+msgid "About"
+msgstr "Kuhusu"
+
+msgid "About Paveline"
+msgstr ""
+
+msgid "Thoughtful birthday wishes, made simple."
+msgstr ""
+
+msgid ""
+"Paveline helps you say the right thing on the days that matter. Write, "
+"personalise and share birthday wishes and cards in any of our supported "
+"languages — no account required."
+msgstr ""
+"Paveline hukusaidia kusema jambo sahihi katika siku muhimu. Andika, "
+"binafsisha na ushiriki pongezi na kadi za siku ya kuzaliwa katika lugha zetu"
+" zinazotumika — hakuna akaunti inayohitajika."
+
+msgid "Personal"
+msgstr ""
+
+msgid ""
+"Wishes adapt to the recipient's name, relationship and the tone you choose."
+msgstr ""
+
+msgid "Multilingual"
+msgstr ""
+
+msgid ""
+"Natural message templates in English, Kiswahili, French, Spanish and Arabic."
+msgstr ""
+
+msgid "Private by default"
+msgstr ""
+
+msgid "Generate wishes as a guest. Save them only if you create an account."
+msgstr ""
+
+msgid "Make Every Birthday Unforgettable"
+msgstr "Fanya Kila Siku ya Kuzaliwa Isiyosahaulika"
+
+msgid "A little love goes a long way"
+msgstr ""
+
+msgid "Make Every Birthday"
+msgstr "Fanya Kila Siku ya Kuzaliwa"
+
+msgid "Unforgettable!"
+msgstr "Isiyosahaulika!"
+
+msgid ""
+"Create beautiful, personalized birthday wishes and greeting cards for the "
+"people who matter most."
+msgstr ""
+"Tengeneza pongezi na kadi nzuri za siku ya kuzaliwa zilizobinafsishwa kwa "
+"watu muhimu zaidi."
+
+msgid "Create a Birthday Wish"
+msgstr "Tengeneza Pongezi ya Siku ya Kuzaliwa"
+
+msgid "Explore Birthday Cards"
+msgstr "Chunguza Kadi za Siku ya Kuzaliwa"
+
+msgid "relationships"
+msgstr "uhusiano"
+
+msgid "message styles"
+msgstr "mitindo ya ujumbe"
+
+msgid "languages"
+msgstr "lugha"
+
+msgid "TODAY IS ALL ABOUT YOU"
+msgstr ""
+
+msgid "with love, always"
+msgstr "kwa upendo, daima"
+
+msgid "Your words, your way"
+msgstr "Maneno yako, kwa mtindo wako"
+
+msgid "from the heart."
+msgstr "kutoka moyoni."
+
+msgid "Make it personal. Make it lovely. Make it theirs."
+msgstr "Ifanye ya kibinafsi. Ifanye ya kupendeza. Ifanye yake."
+
+msgid "Create my wish"
+msgstr "Tengeneza pongezi yangu"
+
+msgid ""
+"Your details stay private. Wish generation runs without sending recipient "
+"data to third parties."
+msgstr ""
+"Maelezo yako yanabaki ya faragha. Utengenezaji wa pongezi haituma data ya "
+"mpokeaji kwa wahusika wengine."
+
+msgid "Pick a feeling"
+msgstr "Chagua hisia"
+
+msgid "Popular card templates"
+msgstr "Violezo maarufu vya kadi"
+
+msgid "Card templates are on their way."
+msgstr ""
+
+msgid "See all templates"
+msgstr "Ona violezo vyote"
+
+msgid "For everyone you love"
+msgstr ""
+
+msgid "Birthday wish categories"
+msgstr ""
+
+msgid "Easy as one, two, yay"
+msgstr "Rahisi kama moja, mbili, yay"
+
+msgid "Made in minutes"
+msgstr "Imefanywa kwa dakika"
+
+msgid "Enter the details"
+msgstr "Weka maelezo"
+
+msgid "Add the recipient's name, date and relationship."
+msgstr "Ongeza jina la mpokeaji, tarehe na uhusiano."
+
+msgid "Choose style & language"
+msgstr "Chagua mtindo na lugha"
+
+msgid "Select a tone and the language that fits."
+msgstr "Chagua sauti na lugha inayofaa."
+
+msgid "Generate the wish"
+msgstr "Tengeneza pongezi"
+
+msgid "Get a personalised wish in seconds."
+msgstr "Pata pongezi iliyobinafsishwa kwa sekunde."
+
+msgid "Customize & share"
+msgstr "Binafsisha na ushiriki"
+
+msgid "Turn it into a card, copy it or share on WhatsApp."
+msgstr "Igeuze kadi, inakili au ishiriki kwenye WhatsApp."
+
+msgid "Thanks for using Paveline."
+msgstr ""
+
+msgid "Hello {{ user }},"
+msgstr ""
+
+msgid ""
+"You are receiving this email because you requested a password reset for your"
+" Paveline account."
+msgstr ""
+
+msgid "Please go to the following page and choose a new password:"
+msgstr ""
+
+msgid ""
+"If you did not request a password reset, you can safely ignore this email."
+msgstr ""
+
+msgid "Email sent"
+msgstr "Barua pepe imetumwa"
+
+msgid "Check your email"
+msgstr "Angalia barua pepe yako"
+
+msgid ""
+"If an account exists for that email, we have sent a link to reset your "
+"password. Please check your inbox and spam folder."
+msgstr ""
+
+msgid "Back to login"
+msgstr "Rudi kwenye kuingia"
+
+msgid "Password reset"
+msgstr "Weka upya nenosiri"
+
+msgid "Reset your password"
+msgstr "Weka upya nenosiri lako"
+
+msgid "Enter your account email and we will send a reset link."
+msgstr ""
+
+msgid "Send reset link"
+msgstr "Tuma kiungo cha kuweka upya"
+
+msgid "Profile"
+msgstr "Wasifu"
+
+msgid "Your settings"
+msgstr "Mipangilio yako"
+
+msgid "Profile settings"
+msgstr "Mipangilio ya wasifu"
+
+msgid "Save changes"
+msgstr "Hifadhi mabadiliko"
+
+msgid "Set a new password"
+msgstr "Weka nenosiri jipya"
+
+msgid "Change password"
+msgstr "Badilisha nenosiri"
+
+msgid "This link has expired"
+msgstr ""
+
+msgid ""
+"The reset link is invalid or has already been used. Please request a new "
+"one."
+msgstr ""
+
+msgid "Request a new link"
+msgstr "Omba kiungo kipya"
+
+msgid "Register"
+msgstr "Jisajili"
+
+msgid "Create your account"
+msgstr "Fungua akaunti yako"
+
+msgid ""
+"Optional — you can always generate wishes as a guest. An account lets you "
+"save birthdays, wishes and reminders."
+msgstr ""
+
+msgid "Create account"
+msgstr "Fungua akaunti"
+
+msgid "Already have an account?"
+msgstr "Tayari una akaunti?"
+
+msgid "Login"
+msgstr "Ingia"
+
+msgid "Password changed"
+msgstr "Nenosiri limebadilishwa"
+
+msgid ""
+"Your password has been updated. You can now log in with your new password."
+msgstr ""
+
+msgid "Log in to manage birthdays, wishes and reminders."
+msgstr ""
+
+msgid "Forgot your password?"
+msgstr "Umesahau nenosiri lako?"
+
+msgid "New here?"
+msgstr "Ni mgeni hapa?"
+
+msgid "Create an account"
+msgstr "Fungua akaunti"
+
+msgid "Skip to content"
+msgstr "Ruka hadi maudhui"
+
+msgid "Create Wish"
+msgstr "Tengeneza Pongezi"
+
+msgid "Birthday Cards"
+msgstr "Kadi za Siku ya Kuzaliwa"
+
+msgid "Language"
+msgstr "Lugha"
+
+msgid "Reminders"
+msgstr "Vikumbusho"
+
+msgid "Log out"
+msgstr "Toka"
+
+msgid "Make every birthday unforgettable. A little love goes a long way."
+msgstr ""
+
+msgid "Explore"
+msgstr "Gundua"
+
+msgid "Home"
+msgstr "Nyumbani"
+
+msgid "Birthday cards"
+msgstr "Kadi za siku ya kuzaliwa"
+
+msgid "Company"
+msgstr "Kampuni"
+
+msgid "Supported languages"
+msgstr "Lugha zinazotumika"
+
+msgid "All rights reserved."
+msgstr "Haki zote zimehifadhiwa."
+
+msgid "Made for the moments that matter."
+msgstr "Imefanywa kwa nyakati muhimu."
+
+msgid "Toggle navigation"
+msgstr "Washa au kuzima menyu"
+
+msgid "Switch theme"
+msgstr "Badilisha mandhari"
+
+msgid "Never miss a birthday"
+msgstr "Usikose siku ya kuzaliwa"
+
+msgid "Add reminder"
+msgstr "Ongeza kikumbusho"
+
+msgid "When"
+msgstr "Lini"
+
+msgid "Status"
+msgstr "Hali"
+
+msgid "On"
+msgstr "Imewaka"
+
+msgid "Off"
+msgstr "Imezimwa"
+
+msgid "Disable"
+msgstr "Zima"
+
+msgid "Enable"
+msgstr "Washa"
+
+msgid "Delete this reminder?"
+msgstr ""
+
+msgid "No reminders yet"
+msgstr "Hakuna vikumbusho bado"
+
+msgid "Reminders are sent by email so you can prepare a wish in time."
+msgstr ""
+
+msgid "Create a reminder"
+msgstr "Tengeneza kikumbusho"
+
+msgid "Upcoming reminder dates"
+msgstr "Tarehe za vikumbusho zinazokuja"
+
+msgid "Edit reminder"
+msgstr "Hariri kikumbusho"
+
+msgid "Add a reminder"
+msgstr "Ongeza kikumbusho"
+
+msgid ""
+"Reminders are delivered by email on the day you choose, before the birthday."
+msgstr ""
+
+msgid "Save reminder"
+msgstr "Hifadhi kikumbusho"

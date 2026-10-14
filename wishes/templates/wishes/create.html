@@ -1,0 +1,54 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% block title %}{% translate "Create a birthday wish" %} — {{ SITE_NAME }}{% endblock %}
+{% block content %}
+<section class="section">
+    <div class="container">
+        <div class="section-heading text-center">
+            <p class="eyebrow justify-content-center"><span aria-hidden="true">✳</span> {% translate "The details" %}</p>
+            <h1>{% translate "Create a birthday wish" %}</h1>
+            <p>{% translate "Fill in what you know. Everything is optional except the choices we will handle the words." %}</p>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-lg-9">
+                <form method="post" class="card-panel" novalidate>
+                    {% csrf_token %}
+                    <h2 class="form-section-title">{% translate "Who is it for?" %}</h2>
+                    <div class="row g-3">
+                        <div class="col-md-6">{% with field=form.name %}{% include "partials/_field.html" %}{% endwith %}</div>
+                        <div class="col-md-6">{% with field=form.relationship %}{% include "partials/_field.html" %}{% endwith %}</div>
+                    </div>
+
+                    <h2 class="form-section-title">{% translate "The message" %}</h2>
+                    <div class="row g-3">
+                        <div class="col-md-4">{% with field=form.tone %}{% include "partials/_field.html" %}{% endwith %}</div>
+                        <div class="col-md-4">{% with field=form.length %}{% include "partials/_field.html" %}{% endwith %}</div>
+                        <div class="col-md-4">{% with field=form.language %}{% include "partials/_field.html" %}{% endwith %}</div>
+                    </div>
+                    <div class="row g-3">
+                        <div class="col-md-6">{% with field=form.sender %}{% include "partials/_field.html" %}{% endwith %}</div>
+                        <div class="col-12">{% with field=form.personal %}{% include "partials/_field.html" %}{% endwith %}</div>
+                    </div>
+
+                    <h2 class="form-section-title">{% translate "Birthday date" %} <span class="muted small">({% translate "optional" %})</span></h2>
+                    <p class="form-text">{% translate "The date lets us tailor the wish and tell you if it is today. The year is optional we never guess an age without it." %}</p>
+                    <div class="row g-3 align-items-end">
+                        <div class="col-md-4">{% with field=form.birth_month %}{% include "partials/_field.html" %}{% endwith %}</div>
+                        <div class="col-md-4">{% with field=form.birth_day %}{% include "partials/_field.html" %}{% endwith %}</div>
+                        <div class="col-md-4">{% with field=form.birth_year %}{% include "partials/_field.html" %}{% endwith %}</div>
+                    </div>
+                    {% with field=form.include_age %}{% include "partials/_field.html" %}{% endwith %}
+
+                    {% if form.non_field_errors %}
+                        <div class="alert alert-danger">{{ form.non_field_errors }}</div>
+                    {% endif %}
+
+                    <div class="d-flex justify-content-end gap-2 mt-3">
+                        <button class="btn btn-primary btn-lg paveline-btn" type="submit">{% translate "Generate wish" %} ✧</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

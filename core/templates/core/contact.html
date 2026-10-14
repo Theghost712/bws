@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% block title %}{% translate "Contact" %} — {{ SITE_NAME }}{% endblock %}
+{% block content %}
+<section class="section">
+    <div class="container narrow">
+        <p class="eyebrow"><span aria-hidden="true">✳</span> {% translate "Contact" %}</p>
+        <h1>{% translate "We would love to hear from you." %}</h1>
+        <p class="lead">{% translate "Questions, ideas or feedback? Send us a message and we will get back to you." %}</p>
+        <div class="contact-details">
+            <a href="mailto:{{ SITE_EMAIL }}"><span class="contact-icon" aria-hidden="true">✉</span> {{ SITE_EMAIL }}</a>
+            <a href="tel:{{ SITE_PHONE_TEL }}"><span class="contact-icon" aria-hidden="true">☎</span> {{ SITE_PHONE }}</a>
+        </div>
+        <form method="post" class="card-panel" novalidate>
+            {% csrf_token %}
+            <div class="row g-3">
+                <div class="col-md-6">{% with field=form.name %}{% include "partials/_field.html" %}{% endwith %}</div>
+                <div class="col-md-6">{% with field=form.email %}{% include "partials/_field.html" %}{% endwith %}</div>
+            </div>
+            {% with field=form.subject %}{% include "partials/_field.html" %}{% endwith %}
+            {% with field=form.message %}{% include "partials/_field.html" %}{% endwith %}
+            <button class="btn btn-primary paveline-btn" type="submit">{% translate "Send message" %}</button>
+        </form>
+    </div>
+</section>
+{% endblock %}

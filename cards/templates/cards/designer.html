@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+{% load static i18n %}
+{% block title %}{% translate "Card designer" %} — {{ SITE_NAME }}{% endblock %}
+{% block content %}
+<section class="section">
+    <div class="container">
+        <div class="section-heading text-center">
+            <p class="eyebrow justify-content-center"><span aria-hidden="true">✳</span> {% translate "Make it yours" %}</p>
+            <h1>{% translate "Birthday card designer" %}</h1>
+            <p>{% translate "Choose a design, write your message and download a PNG. No account needed." %}</p>
+        </div>
+
+        <div class="row g-4">
+            <div class="col-lg-5">
+                <form id="card-form" class="card-panel" method="post" action="{% url 'cards:render' %}" enctype="multipart/form-data" novalidate>
+                    {% csrf_token %}
+                    <input type="hidden" name="download" id="download-flag" value="0">
+                    {% for field in form %}{% include "partials/_field.html" %}{% endfor %}
+                    <div class="d-flex flex-wrap gap-2 mt-2">
+                        <button class="btn btn-primary paveline-btn" type="button" id="preview-btn">{% translate "Preview" %}</button>
+                        <button class="btn btn-outline-secondary" type="button" id="download-btn">{% translate "Download PNG" %}</button>
+                    </div>
+                    <p class="action-status" id="designer-status" role="status" aria-live="polite"></p>
+                </form>
+            </div>
+            <div class="col-lg-7">
+                <div class="designer-stage">
+                    <img id="card-preview-img" alt="{% translate 'Card preview' %}"
+                         src="{% if form.template.value %}{% url 'cards:template_preview' form.template.value %}{% endif %}">
+                    <p id="card-preview-placeholder" class="muted">{% translate "Your card preview will appear here." %}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
+
+{% block extra_js %}
+<script src="{% static 'js/designer.js' %}" defer></script>
+{% endblock %}

@@ -1,0 +1,50 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% block title %}{% translate "Saved wishes" %} — {{ SITE_NAME }}{% endblock %}
+{% block content %}
+<section class="section">
+    <div class="container">
+        <div class="dashboard-header">
+            <div><p class="eyebrow"><span aria-hidden="true">✳</span> {% translate "Your collection" %}</p><h1>{% translate "Saved wishes" %}</h1></div>
+            <a class="btn btn-primary paveline-btn" href="{% url 'wishes:create' %}">{% translate "Create a wish" %}</a>
+        </div>
+
+        <form method="get" class="filter-bar">
+            <input type="search" name="q" value="{{ query }}" class="form-control" placeholder="{% translate 'Search by recipient…' %}">
+            <select name="language" class="form-select">
+                <option value="">{% translate "All languages" %}</option>
+                <option value="en" {% if language == 'en' %}selected{% endif %}>English</option>
+                <option value="sw" {% if language == 'sw' %}selected{% endif %}>Kiswahili</option>
+                <option value="fr" {% if language == 'fr' %}selected{% endif %}>Français</option>
+                <option value="es" {% if language == 'es' %}selected{% endif %}>Español</option>
+                <option value="ar" {% if language == 'ar' %}selected{% endif %}>العربية</option>
+            </select>
+            <button class="btn btn-outline-secondary" type="submit">{% translate "Filter" %}</button>
+        </form>
+
+        {% if wishes %}
+            <div class="wish-grid">
+                {% for wish in wishes %}
+                    <article class="wish-tile">
+                        <a class="wish-tile-link" href="{{ wish.get_absolute_url }}">
+                            <h3>{% if wish.recipient_name %}{{ wish.recipient_name }}{% else %}{{ wish.get_relationship_display }}{% endif %}</h3>
+                            <p>{{ wish.message|truncatechars:120 }}</p>
+                        </a>
+                        <div class="wish-tile-meta">
+                            <span>{{ wish.get_tone_display }}</span>
+                            <span>{{ wish.created_at|date:"M j, Y" }}</span>
+                            {% if wish.id in favorite_ids %}<span class="text-warning" title="{% translate 'Favourite' %}">★</span>{% endif %}
+                        </div>
+                    </article>
+                {% endfor %}
+            </div>
+        {% else %}
+            <div class="empty-state-box">
+                <h3>{% translate "No saved wishes yet" %}</h3>
+                <p>{% translate "Generate a wish and save it to build your collection." %}</p>
+                <a class="btn btn-primary paveline-btn" href="{% url 'wishes:create' %}">{% translate "Create your first wish" %}</a>
+            </div>
+        {% endif %}
+    </div>
+</section>
+{% endblock %}

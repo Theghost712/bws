@@ -1,0 +1,64 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% block title %}{% translate "Dashboard" %} — {{ SITE_NAME }}{% endblock %}
+{% block content %}
+<section class="section">
+    <div class="container">
+        <div class="dashboard-header">
+            <div>
+                <p class="eyebrow"><span aria-hidden="true">✳</span> {% translate "Your dashboard" %}</p>
+                <h1>{% translate "Welcome back" %}, {{ user.get_short_name|default:user.username }}.</h1>
+            </div>
+            <a class="btn btn-primary paveline-btn" href="{% url 'wishes:create' %}">{% translate "Create a wish" %}</a>
+        </div>
+
+        <div class="stat-grid">
+            <a class="stat-card" href="{% url 'birthdays:list' %}"><span class="stat-value">{{ birthday_count }}</span><span class="stat-label">{% translate "Saved birthdays" %}</span></a>
+            <a class="stat-card" href="{% url 'wishes:saved_list' %}"><span class="stat-value">{{ wish_count }}</span><span class="stat-label">{% translate "Saved wishes" %}</span></a>
+            <a class="stat-card" href="{% url 'wishes:favorites' %}"><span class="stat-value">{{ favorite_count }}</span><span class="stat-label">{% translate "Favourites" %}</span></a>
+            <a class="stat-card" href="{% url 'reminders:list' %}"><span class="stat-value">{{ reminder_count }}</span><span class="stat-label">{% translate "Active reminders" %}</span></a>
+        </div>
+
+        <div class="row g-4 mt-2">
+            <div class="col-lg-6">
+                <div class="card-panel h-100">
+                    <div class="panel-head"><h2>{% translate "Today & upcoming" %}</h2><a href="{% url 'birthdays:upcoming' %}">{% translate "View all" %}</a></div>
+                    {% if today_birthdays %}
+                        <ul class="simple-list">
+                            {% for birthday in today_birthdays %}
+                                <li><span class="badge text-bg-warning">{% translate "Today" %}</span> <a href="{{ birthday.get_absolute_url }}">{{ birthday.recipient_name }}</a></li>
+                            {% endfor %}
+                        </ul>
+                    {% endif %}
+                    {% if upcoming %}
+                        <ul class="simple-list">
+                            {% for entry in upcoming %}
+                                <li>
+                                    <a href="{{ entry.birthday.get_absolute_url }}">{{ entry.birthday.recipient_name }}</a>
+                                    <span class="muted">{% blocktranslate count days=entry.days_until %}{{ days }} day{% plural %}{{ days }} days{% endblocktranslate %}</span>
+                                </li>
+                            {% endfor %}
+                        </ul>
+                    {% elif not today_birthdays %}
+                        <p class="empty-state">{% translate "No upcoming birthdays yet." %} <a href="{% url 'birthdays:add' %}">{% translate "Add one" %}</a>.</p>
+                    {% endif %}
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="card-panel h-100">
+                    <div class="panel-head"><h2>{% translate "Recent wishes" %}</h2><a href="{% url 'wishes:saved_list' %}">{% translate "View all" %}</a></div>
+                    {% if recent_wishes %}
+                        <ul class="simple-list">
+                            {% for wish in recent_wishes %}
+                                <li><a href="{{ wish.get_absolute_url }}">{{ wish.recipient_name|default:wish.get_relationship_display }}</a> <span class="muted">{{ wish.get_language_display }} · {{ wish.get_tone_display }}</span></li>
+                            {% endfor %}
+                        </ul>
+                    {% else %}
+                        <p class="empty-state">{% translate "You have not saved any wishes yet." %} <a href="{% url 'wishes:create' %}">{% translate "Create one" %}</a>.</p>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

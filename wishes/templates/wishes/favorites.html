@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% block title %}{% translate "Favourite wishes" %} — {{ SITE_NAME }}{% endblock %}
+{% block content %}
+<section class="section">
+    <div class="container">
+        <div class="dashboard-header">
+            <div><p class="eyebrow"><span aria-hidden="true">✳</span> {% translate "Starred" %}</p><h1>{% translate "Favourite wishes" %}</h1></div>
+            <a class="btn btn-outline-secondary" href="{% url 'wishes:saved_list' %}">{% translate "All saved wishes" %}</a>
+        </div>
+        {% if favorites %}
+            <div class="wish-grid">
+                {% for favorite in favorites %}
+                    <article class="wish-tile">
+                        <a class="wish-tile-link" href="{{ favorite.wish.get_absolute_url }}">
+                            <h3>{{ favorite.wish.recipient_name|default:favorite.wish.get_relationship_display }}</h3>
+                            <p>{{ favorite.wish.message|truncatechars:120 }}</p>
+                        </a>
+                        <div class="wish-tile-meta"><span>{{ favorite.wish.get_tone_display }}</span><span class="text-warning">★</span></div>
+                    </article>
+                {% endfor %}
+            </div>
+        {% else %}
+            <div class="empty-state-box">
+                <h3>{% translate "No favourites yet" %}</h3>
+                <p>{% translate "Star a saved wish to find it here quickly." %}</p>
+                <a class="btn btn-primary paveline-btn" href="{% url 'wishes:saved_list' %}">{% translate "Browse saved wishes" %}</a>
+            </div>
+        {% endif %}
+    </div>
+</section>
+{% endblock %}

@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% block title %}{% translate "Privacy Policy" %} — {{ SITE_NAME }}{% endblock %}
+{% block content %}
+<section class="section">
+    <div class="container narrow prose">
+        <p class="eyebrow"><span aria-hidden="true">✳</span> {% translate "Privacy Policy" %}</p>
+        <h1>{% translate "Your privacy matters." %}</h1>
+        <p>{% translate "This policy explains what Paveline stores and why. It is written plainly on purpose." %}</p>
+        <h2>{% translate "Generating wishes as a guest" %}</h2>
+        <p>{% translate "When you generate a wish without an account, your recipient's details are used only for that request and are not stored in our database. The wish text is generated from local templates." %}</p>
+        <h2>{% translate "If you create an account" %}</h2>
+        <p>{% translate "We store the account details you provide, plus any birthdays, wishes, favourites or reminders you choose to save. This data is visible only to you and is never shown on public pages." %}</p>
+        <h2>{% translate "Uploaded images" %}</h2>
+        <p>{% translate "Photos you upload while designing a card are used solely to render that card. They are not shared with other users." %}</p>
+        <h2>{% translate "Contact" %}</h2>
+        <p>{% translate "For any privacy request, please use the contact page and we will respond." %}</p>
+    </div>
+</section>
+{% endblock %}

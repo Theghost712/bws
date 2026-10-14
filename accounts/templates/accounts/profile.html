@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% block title %}{% translate "Profile" %} — {{ SITE_NAME }}{% endblock %}
+{% block content %}
+<section class="section">
+    <div class="container narrow">
+        <p class="eyebrow"><span aria-hidden="true">✳</span> {% translate "Your settings" %}</p>
+        <h1>{% translate "Profile settings" %}</h1>
+        <form method="post" class="card-panel" novalidate>
+            {% csrf_token %}
+            <div class="row g-3">
+                <div class="col-md-6">{% with field=form.display_name %}{% include "partials/_field.html" %}{% endwith %}</div>
+                <div class="col-md-6">{% with field=form.first_name %}{% include "partials/_field.html" %}{% endwith %}</div>
+                <div class="col-md-6">{% with field=form.email %}{% include "partials/_field.html" %}{% endwith %}</div>
+                <div class="col-md-6">{% with field=form.preferred_language %}{% include "partials/_field.html" %}{% endwith %}</div>
+            </div>
+            {% with field=form.email_reminders %}{% include "partials/_field.html" %}{% endwith %}
+            <button class="btn btn-primary paveline-btn" type="submit">{% translate "Save changes" %}</button>
+        </form>
+    </div>
+</section>
+{% endblock %}

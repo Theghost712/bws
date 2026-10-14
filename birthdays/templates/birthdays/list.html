@@ -1,0 +1,63 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% block title %}{% translate "My birthdays" %} — {{ SITE_NAME }}{% endblock %}
+{% block content %}
+<section class="section">
+    <div class="container">
+        <div class="dashboard-header">
+            <div><p class="eyebrow"><span aria-hidden="true">✳</span> {% translate "Birthday manager" %}</p><h1>{% translate "Saved birthdays" %}</h1></div>
+            <div class="d-flex gap-2">
+                <a class="btn btn-outline-secondary" href="{% url 'birthdays:upcoming' %}">{% translate "Upcoming" %}</a>
+                <a class="btn btn-primary paveline-btn" href="{% url 'birthdays:add' %}">{% translate "Add birthday" %}</a>
+            </div>
+        </div>
+
+        <form method="get" class="filter-bar">
+            <input type="search" name="q" value="{{ query }}" class="form-control" placeholder="{% translate 'Search name or notes…' %}">
+            <select name="relationship" class="form-select">
+                <option value="">{% translate "All relationships" %}</option>
+                {% for value, label in relationships %}
+                    <option value="{{ value }}" {% if relationship == value %}selected{% endif %}>{{ label }}</option>
+                {% endfor %}
+            </select>
+            <select name="sort" class="form-select">
+                <option value="name" {% if sort == 'name' %}selected{% endif %}>{% translate "Sort: name" %}</option>
+                <option value="recent" {% if sort == 'recent' %}selected{% endif %}>{% translate "Sort: recently added" %}</option>
+            </select>
+            <button class="btn btn-outline-secondary" type="submit">{% translate "Apply" %}</button>
+        </form>
+
+        {% if birthdays %}
+            <div class="table-responsive">
+                <table class="table align-middle paveline-table">
+                    <thead>
+                        <tr><th>{% translate "Name" %}</th><th>{% translate "Date" %}</th><th>{% translate "Relationship" %}</th><th></th></tr>
+                    </thead>
+                    <tbody>
+                        {% for birthday in birthdays %}
+                            <tr>
+                                <td><a href="{{ birthday.get_absolute_url }}">{{ birthday.recipient_name }}</a></td>
+                                <td>{{ birthday.birthday|date:"F j" }}{% if birthday.has_known_year %}, {{ birthday.birth_year }}{% endif %}</td>
+                                <td>{{ birthday.get_relationship_display }}</td>
+                                <td class="text-end">
+                                    <a class="btn btn-sm btn-outline-secondary" href="{% url 'birthdays:edit' birthday.pk %}">{% translate "Edit" %}</a>
+                                    <form method="post" action="{% url 'birthdays:delete' birthday.pk %}" class="d-inline" onsubmit="return confirm('{% translate "Delete this birthday?" %}');">
+                                        {% csrf_token %}
+                                        <button class="btn btn-sm btn-outline-danger" type="submit">{% translate "Delete" %}</button>
+                                    </form>
+                                </td>
+                            </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        {% else %}
+            <div class="empty-state-box">
+                <h3>{% translate "No birthdays saved yet" %}</h3>
+                <p>{% translate "Add the people you never want to forget." %}</p>
+                <a class="btn btn-primary paveline-btn" href="{% url 'birthdays:add' %}">{% translate "Add your first birthday" %}</a>
+            </div>
+        {% endif %}
+    </div>
+</section>
+{% endblock %}

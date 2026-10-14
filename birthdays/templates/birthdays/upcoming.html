@@ -1,0 +1,49 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% block title %}{% translate "Upcoming birthdays" %} — {{ SITE_NAME }}{% endblock %}
+{% block content %}
+<section class="section">
+    <div class="container">
+        <div class="dashboard-header">
+            <div><p class="eyebrow"><span aria-hidden="true">✳</span> {% translate "Next 90 days" %}</p><h1>{% translate "Upcoming birthdays" %}</h1></div>
+            <a class="btn btn-outline-secondary" href="{% url 'birthdays:list' %}">{% translate "All birthdays" %}</a>
+        </div>
+
+        {% if today %}
+            <div class="card-panel today-panel">
+                <h2>🎉 {% translate "Today" %}</h2>
+                <ul class="simple-list">
+                    {% for birthday in today %}
+                        <li><a href="{{ birthday.get_absolute_url }}">{{ birthday.recipient_name }}</a> <a class="btn btn-sm btn-primary paveline-btn" href="{% url 'wishes:create' %}?name={{ birthday.recipient_name|urlencode }}&relationship={{ birthday.relationship }}">{% translate "Wish now" %}</a></li>
+                    {% endfor %}
+                </ul>
+            </div>
+        {% endif %}
+
+        {% if upcoming %}
+            <div class="upcoming-list">
+                {% for entry in upcoming %}
+                    <div class="upcoming-row {% if entry.is_today %}is-today{% endif %}">
+                        <div class="upcoming-date"><span class="day">{{ entry.next_date|date:"d" }}</span><span class="month">{{ entry.next_date|date:"M" }}</span></div>
+                        <div class="upcoming-info">
+                            <a href="{{ entry.birthday.get_absolute_url }}">{{ entry.birthday.recipient_name }}</a>
+                            <span class="muted">{{ entry.birthday.get_relationship_display }}{% if entry.age_turning %} · {% translate "turning" %} {{ entry.age_turning }}{% endif %}</span>
+                        </div>
+                        <div class="upcoming-count">
+                            {% if entry.is_today %}<span class="badge text-bg-success">{% translate "Today" %}</span>
+                            {% else %}{% blocktranslate count days=entry.days_until %}{{ days }} day{% plural %}{{ days }} days{% endblocktranslate %}{% endif %}
+                        </div>
+                        <a class="btn btn-sm btn-outline-secondary" href="{% url 'wishes:create' %}?name={{ entry.birthday.recipient_name|urlencode }}&relationship={{ entry.birthday.relationship }}">{% translate "Wish" %}</a>
+                    </div>
+                {% endfor %}
+            </div>
+        {% elif not today %}
+            <div class="empty-state-box">
+                <h3>{% translate "Nothing coming up" %}</h3>
+                <p>{% translate "No birthdays in the next 90 days." %}</p>
+                <a class="btn btn-primary paveline-btn" href="{% url 'birthdays:add' %}">{% translate "Add a birthday" %}</a>
+            </div>
+        {% endif %}
+    </div>
+</section>
+{% endblock %}

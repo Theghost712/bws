@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% block title %}{% translate "About" %} — {{ SITE_NAME }}{% endblock %}
+{% block content %}
+<section class="section">
+    <div class="container narrow">
+        <p class="eyebrow"><span aria-hidden="true">✳</span> {% translate "About Paveline" %}</p>
+        <h1>{% translate "Thoughtful birthday wishes, made simple." %}</h1>
+        <p class="lead">{% translate "Paveline helps you say the right thing on the days that matter. Write, personalise and share birthday wishes and cards in any of our supported languages — no account required." %}</p>
+        <div class="feature-row">
+            <div class="feature-card"><h3>{% translate "Personal" %}</h3><p>{% translate "Wishes adapt to the recipient's name, relationship and the tone you choose." %}</p></div>
+            <div class="feature-card"><h3>{% translate "Multilingual" %}</h3><p>{% translate "Natural message templates in English, Kiswahili, French, Spanish and Arabic." %}</p></div>
+            <div class="feature-card"><h3>{% translate "Private by default" %}</h3><p>{% translate "Generate wishes as a guest. Save them only if you create an account." %}</p></div>
+        </div>
+    </div>
+</section>
+{% endblock %}

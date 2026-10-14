@@ -1,0 +1,829 @@
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: paveline\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: \n"
+"Last-Translator: Paveline\n"
+"Language-Team: fr\n"
+"Language: fr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+msgid "{{ days }} day"
+msgid_plural "{{ days }} days"
+msgstr[0] "{{ days }} jour"
+msgstr[1] "{{ days }} jours"
+
+msgid "Card designer"
+msgstr "Créateur de cartes"
+
+msgid "Make it yours"
+msgstr ""
+
+msgid "Birthday card designer"
+msgstr "Créateur de cartes d'anniversaire"
+
+msgid ""
+"Choose a design, write your message and download a PNG. No account needed."
+msgstr ""
+
+msgid "Preview"
+msgstr "Aperçu"
+
+msgid "Download PNG"
+msgstr "Télécharger le PNG"
+
+msgid "Your card preview will appear here."
+msgstr "L'aperçu de votre carte apparaîtra ici."
+
+msgid "Card preview"
+msgstr "Aperçu de la carte"
+
+msgid "Birthday card gallery"
+msgstr "Galerie de cartes d'anniversaire"
+
+msgid "Designs for every feeling"
+msgstr "Des designs pour chaque émotion"
+
+msgid "Pick a template, add your words and download a ready-to-share card."
+msgstr ""
+
+msgid "All"
+msgstr "Tous"
+
+msgid "Happy birthday!"
+msgstr "Joyeux anniversaire !"
+
+msgid "Wishing you a day as lovely as you are."
+msgstr ""
+
+msgid "Use this design"
+msgstr "Utiliser ce design"
+
+msgid "No templates here yet"
+msgstr ""
+
+msgid "Saved wish"
+msgstr "Souhait enregistré"
+
+msgid "Remove favourite"
+msgstr "Retirer des favoris"
+
+msgid "Add to favourites"
+msgstr "Ajouter aux favoris"
+
+msgid "Edit note"
+msgstr "Modifier la note"
+
+msgid "A DAY AS LOVELY AS YOU"
+msgstr ""
+
+msgid "Copy wish"
+msgstr "Copier le souhait"
+
+msgid "WhatsApp"
+msgstr "WhatsApp"
+
+msgid "Make a card"
+msgstr "Créer une carte"
+
+msgid "Your note"
+msgstr "Votre note"
+
+msgid "No note yet."
+msgstr ""
+
+msgid "Delete this wish?"
+msgstr ""
+
+msgid "Delete wish"
+msgstr ""
+
+msgid "Notes are private to you."
+msgstr ""
+
+msgid "Save note"
+msgstr "Enregistrer la note"
+
+msgid "Cancel"
+msgstr "Annuler"
+
+msgid "Favourite wishes"
+msgstr "Souhaits favoris"
+
+msgid "Starred"
+msgstr ""
+
+msgid "All saved wishes"
+msgstr "Tous les souhaits enregistrés"
+
+msgid "No favourites yet"
+msgstr "Aucun favori"
+
+msgid "Star a saved wish to find it here quickly."
+msgstr "Marquez un souhait d'une étoile pour le retrouver ici."
+
+msgid "Browse saved wishes"
+msgstr "Parcourir les souhaits enregistrés"
+
+msgid "Your birthday wish"
+msgstr "Votre souhait d'anniversaire"
+
+msgid "Step 2 — your card"
+msgstr ""
+
+msgid "Here is your wish"
+msgstr "Voici votre souhait"
+
+msgid "Their birthday is today!"
+msgstr ""
+
+msgid "Another version"
+msgstr "Une autre version"
+
+msgid "Share"
+msgstr "Partager"
+
+msgid "Design a card"
+msgstr "Créer une carte"
+
+msgid "Save this wish"
+msgstr "Enregistrer ce souhait"
+
+msgid "Register to save wishes"
+msgstr "Inscrivez-vous pour enregistrer"
+
+msgid "More ideas"
+msgstr "Plus d'idées"
+
+msgid "Use this version"
+msgstr "Utiliser cette version"
+
+msgid "Send it their way"
+msgstr ""
+
+msgid ""
+"Copy the wish, share it on WhatsApp, or use your device's share sheet. "
+"Sharing needs no account from the recipient."
+msgstr ""
+
+msgid "Create another wish"
+msgstr "Créer un autre souhait"
+
+msgid "Saved wishes"
+msgstr "Souhaits enregistrés"
+
+msgid "Your collection"
+msgstr "Votre collection"
+
+msgid "Create a wish"
+msgstr "Créer un souhait"
+
+msgid "All languages"
+msgstr "Toutes les langues"
+
+msgid "Filter"
+msgstr "Filtrer"
+
+msgid "No saved wishes yet"
+msgstr "Aucun souhait enregistré"
+
+msgid "Generate a wish and save it to build your collection."
+msgstr ""
+
+msgid "Create your first wish"
+msgstr "Créez votre premier souhait"
+
+msgid "Search by recipient…"
+msgstr "Rechercher par destinataire…"
+
+msgid "Favourite"
+msgstr "Favori"
+
+msgid "Create a birthday wish"
+msgstr "Créer un souhait d'anniversaire"
+
+msgid "The details"
+msgstr "Les détails"
+
+msgid ""
+"Fill in what you know. Everything is optional except the choices — we will "
+"handle the words."
+msgstr ""
+
+msgid "Who is it for?"
+msgstr "Pour qui ?"
+
+msgid "The message"
+msgstr "Le message"
+
+msgid "Birthday date"
+msgstr ""
+
+msgid "optional"
+msgstr "facultatif"
+
+msgid ""
+"The date lets us tailor the wish and tell you if it is today. The year is "
+"optional — we never guess an age without it."
+msgstr ""
+
+msgid "Generate wish"
+msgstr "Générer un souhait"
+
+msgid "Upcoming birthdays"
+msgstr "Anniversaires à venir"
+
+msgid "Next 90 days"
+msgstr "90 prochains jours"
+
+msgid "All birthdays"
+msgstr "Tous les anniversaires"
+
+msgid "Today"
+msgstr "Aujourd'hui"
+
+msgid "Wish now"
+msgstr ""
+
+msgid "turning"
+msgstr "fête ses"
+
+msgid "Wish"
+msgstr ""
+
+msgid "Nothing coming up"
+msgstr "Rien à venir"
+
+msgid "No birthdays in the next 90 days."
+msgstr "Aucun anniversaire dans les 90 prochains jours."
+
+msgid "Add a birthday"
+msgstr "Ajouter un anniversaire"
+
+msgid "Birthday details"
+msgstr ""
+
+msgid "Edit"
+msgstr "Modifier"
+
+msgid "Delete this birthday?"
+msgstr ""
+
+msgid "Delete"
+msgstr "Supprimer"
+
+msgid "Birthday"
+msgstr "Anniversaire"
+
+msgid "Today!"
+msgstr "Aujourd'hui !"
+
+msgid "Days to go"
+msgstr "Jours restants"
+
+msgid "Turning"
+msgstr "Fête ses"
+
+msgid "Notes"
+msgstr "Notes"
+
+msgid "Set a reminder"
+msgstr ""
+
+msgid "My birthdays"
+msgstr "Mes anniversaires"
+
+msgid "Birthday manager"
+msgstr "Gestionnaire d'anniversaires"
+
+msgid "Saved birthdays"
+msgstr "Anniversaires enregistrés"
+
+msgid "Upcoming"
+msgstr "À venir"
+
+msgid "Add birthday"
+msgstr "Ajouter un anniversaire"
+
+msgid "All relationships"
+msgstr "Toutes les relations"
+
+msgid "Sort: name"
+msgstr "Trier : nom"
+
+msgid "Sort: recently added"
+msgstr "Trier : ajoutés récemment"
+
+msgid "Apply"
+msgstr ""
+
+msgid "Name"
+msgstr "Nom"
+
+msgid "Date"
+msgstr "Date"
+
+msgid "Relationship"
+msgstr "Relation"
+
+msgid "No birthdays saved yet"
+msgstr "Aucun anniversaire enregistré"
+
+msgid "Add the people you never want to forget."
+msgstr ""
+
+msgid "Add your first birthday"
+msgstr "Ajoutez votre premier anniversaire"
+
+msgid "Search name or notes…"
+msgstr "Rechercher un nom ou des notes…"
+
+msgid "Edit birthday"
+msgstr "Modifier l'anniversaire"
+
+msgid "Save birthday"
+msgstr "Enregistrer l'anniversaire"
+
+msgid "Dashboard"
+msgstr "Tableau de bord"
+
+msgid "Your dashboard"
+msgstr "Votre tableau de bord"
+
+msgid "Welcome back"
+msgstr "Bon retour"
+
+msgid "Favourites"
+msgstr "Favoris"
+
+msgid "Active reminders"
+msgstr ""
+
+msgid "Today & upcoming"
+msgstr ""
+
+msgid "View all"
+msgstr ""
+
+msgid "No upcoming birthdays yet."
+msgstr "Aucun anniversaire à venir."
+
+msgid "Add one"
+msgstr ""
+
+msgid "Recent wishes"
+msgstr "Souhaits récents"
+
+msgid "You have not saved any wishes yet."
+msgstr ""
+
+msgid "Create one"
+msgstr ""
+
+msgid "Privacy Policy"
+msgstr "Politique de confidentialité"
+
+msgid "Your privacy matters."
+msgstr ""
+
+msgid ""
+"This policy explains what Paveline stores and why. It is written plainly on "
+"purpose."
+msgstr ""
+
+msgid "Generating wishes as a guest"
+msgstr "Générer des souhaits en tant qu'invité"
+
+msgid ""
+"When you generate a wish without an account, your recipient's details are "
+"used only for that request and are not stored in our database. The wish text"
+" is generated from local templates."
+msgstr ""
+
+msgid "If you create an account"
+msgstr ""
+
+msgid ""
+"We store the account details you provide, plus any birthdays, wishes, "
+"favourites or reminders you choose to save. This data is visible only to you"
+" and is never shown on public pages."
+msgstr ""
+
+msgid "Uploaded images"
+msgstr ""
+
+msgid ""
+"Photos you upload while designing a card are used solely to render that "
+"card. They are not shared with other users."
+msgstr ""
+
+msgid "Contact"
+msgstr "Contact"
+
+msgid ""
+"For any privacy request, please use the contact page and we will respond."
+msgstr ""
+
+msgid "Terms of Service"
+msgstr "Conditions d'utilisation"
+
+msgid "Terms of use"
+msgstr ""
+
+msgid "By using Paveline you agree to use it responsibly and lawfully."
+msgstr ""
+
+msgid "Your content"
+msgstr ""
+
+msgid ""
+"You are responsible for the content you create and share. Do not use the "
+"service to send harmful, abusive or unlawful messages."
+msgstr ""
+
+msgid "Accounts"
+msgstr ""
+
+msgid ""
+"Keep your login details secure. You are responsible for activity on your "
+"account."
+msgstr ""
+
+msgid "Availability"
+msgstr ""
+
+msgid ""
+"Paveline is provided as-is. Features may change as the service improves."
+msgstr ""
+
+msgid "We would love to hear from you."
+msgstr ""
+
+msgid ""
+"Questions, ideas or feedback? Send us a message and we will get back to you."
+msgstr ""
+
+msgid "Send message"
+msgstr "Envoyer le message"
+
+msgid "About"
+msgstr "À propos"
+
+msgid "About Paveline"
+msgstr ""
+
+msgid "Thoughtful birthday wishes, made simple."
+msgstr ""
+
+msgid ""
+"Paveline helps you say the right thing on the days that matter. Write, "
+"personalise and share birthday wishes and cards in any of our supported "
+"languages — no account required."
+msgstr ""
+"Paveline vous aide à dire les bons mots les jours qui comptent. Rédigez, "
+"personnalisez et partagez souhaits et cartes dans toutes nos langues — aucun"
+" compte requis."
+
+msgid "Personal"
+msgstr ""
+
+msgid ""
+"Wishes adapt to the recipient's name, relationship and the tone you choose."
+msgstr ""
+
+msgid "Multilingual"
+msgstr ""
+
+msgid ""
+"Natural message templates in English, Kiswahili, French, Spanish and Arabic."
+msgstr ""
+
+msgid "Private by default"
+msgstr ""
+
+msgid "Generate wishes as a guest. Save them only if you create an account."
+msgstr ""
+
+msgid "Make Every Birthday Unforgettable"
+msgstr "Rendez chaque anniversaire inoubliable"
+
+msgid "A little love goes a long way"
+msgstr ""
+
+msgid "Make Every Birthday"
+msgstr "Rendez chaque anniversaire"
+
+msgid "Unforgettable!"
+msgstr "Inoubliable !"
+
+msgid ""
+"Create beautiful, personalized birthday wishes and greeting cards for the "
+"people who matter most."
+msgstr ""
+"Créez de beaux souhaits et cartes d'anniversaire personnalisés pour ceux qui"
+" comptent le plus."
+
+msgid "Create a Birthday Wish"
+msgstr "Créer un souhait d'anniversaire"
+
+msgid "Explore Birthday Cards"
+msgstr "Découvrir les cartes d'anniversaire"
+
+msgid "relationships"
+msgstr "relations"
+
+msgid "message styles"
+msgstr "styles de message"
+
+msgid "languages"
+msgstr "langues"
+
+msgid "TODAY IS ALL ABOUT YOU"
+msgstr ""
+
+msgid "with love, always"
+msgstr "avec amour, toujours"
+
+msgid "Your words, your way"
+msgstr "Vos mots, à votre façon"
+
+msgid "from the heart."
+msgstr "du fond du cœur."
+
+msgid "Make it personal. Make it lovely. Make it theirs."
+msgstr "Rendez-le personnel. Rendez-le beau. Rendez-le leur."
+
+msgid "Create my wish"
+msgstr "Créer mon souhait"
+
+msgid ""
+"Your details stay private. Wish generation runs without sending recipient "
+"data to third parties."
+msgstr ""
+"Vos données restent privées. La génération ne transmet aucune donnée du "
+"destinataire à des tiers."
+
+msgid "Pick a feeling"
+msgstr "Choisissez une émotion"
+
+msgid "Popular card templates"
+msgstr "Modèles de cartes populaires"
+
+msgid "Card templates are on their way."
+msgstr ""
+
+msgid "See all templates"
+msgstr "Voir tous les modèles"
+
+msgid "For everyone you love"
+msgstr ""
+
+msgid "Birthday wish categories"
+msgstr ""
+
+msgid "Easy as one, two, yay"
+msgstr "Simple comme un, deux, youpi"
+
+msgid "Made in minutes"
+msgstr "Fait en quelques minutes"
+
+msgid "Enter the details"
+msgstr "Saisissez les détails"
+
+msgid "Add the recipient's name, date and relationship."
+msgstr "Ajoutez le nom, la date et la relation du destinataire."
+
+msgid "Choose style & language"
+msgstr "Choisissez le style et la langue"
+
+msgid "Select a tone and the language that fits."
+msgstr "Choisissez un ton et la langue qui convient."
+
+msgid "Generate the wish"
+msgstr "Générer le souhait"
+
+msgid "Get a personalised wish in seconds."
+msgstr "Obtenez un souhait personnalisé en quelques secondes."
+
+msgid "Customize & share"
+msgstr "Personnalisez et partagez"
+
+msgid "Turn it into a card, copy it or share on WhatsApp."
+msgstr "Transformez-le en carte, copiez-le ou partagez-le sur WhatsApp."
+
+msgid "Thanks for using Paveline."
+msgstr ""
+
+msgid "Hello {{ user }},"
+msgstr ""
+
+msgid ""
+"You are receiving this email because you requested a password reset for your"
+" Paveline account."
+msgstr ""
+
+msgid "Please go to the following page and choose a new password:"
+msgstr ""
+
+msgid ""
+"If you did not request a password reset, you can safely ignore this email."
+msgstr ""
+
+msgid "Email sent"
+msgstr "E-mail envoyé"
+
+msgid "Check your email"
+msgstr "Vérifiez votre e-mail"
+
+msgid ""
+"If an account exists for that email, we have sent a link to reset your "
+"password. Please check your inbox and spam folder."
+msgstr ""
+
+msgid "Back to login"
+msgstr "Retour à la connexion"
+
+msgid "Password reset"
+msgstr "Réinitialisation du mot de passe"
+
+msgid "Reset your password"
+msgstr "Réinitialisez votre mot de passe"
+
+msgid "Enter your account email and we will send a reset link."
+msgstr ""
+
+msgid "Send reset link"
+msgstr "Envoyer le lien"
+
+msgid "Profile"
+msgstr "Profil"
+
+msgid "Your settings"
+msgstr "Vos paramètres"
+
+msgid "Profile settings"
+msgstr "Paramètres du profil"
+
+msgid "Save changes"
+msgstr "Enregistrer"
+
+msgid "Set a new password"
+msgstr "Définir un nouveau mot de passe"
+
+msgid "Change password"
+msgstr "Changer le mot de passe"
+
+msgid "This link has expired"
+msgstr ""
+
+msgid ""
+"The reset link is invalid or has already been used. Please request a new "
+"one."
+msgstr ""
+
+msgid "Request a new link"
+msgstr "Demander un nouveau lien"
+
+msgid "Register"
+msgstr "S'inscrire"
+
+msgid "Create your account"
+msgstr "Créez votre compte"
+
+msgid ""
+"Optional — you can always generate wishes as a guest. An account lets you "
+"save birthdays, wishes and reminders."
+msgstr ""
+
+msgid "Create account"
+msgstr "Créer un compte"
+
+msgid "Already have an account?"
+msgstr "Vous avez déjà un compte ?"
+
+msgid "Login"
+msgstr "Connexion"
+
+msgid "Password changed"
+msgstr "Mot de passe modifié"
+
+msgid ""
+"Your password has been updated. You can now log in with your new password."
+msgstr ""
+
+msgid "Log in to manage birthdays, wishes and reminders."
+msgstr ""
+
+msgid "Forgot your password?"
+msgstr "Mot de passe oublié ?"
+
+msgid "New here?"
+msgstr "Nouveau ici ?"
+
+msgid "Create an account"
+msgstr "Créer un compte"
+
+msgid "Skip to content"
+msgstr "Aller au contenu"
+
+msgid "Create Wish"
+msgstr "Créer un souhait"
+
+msgid "Birthday Cards"
+msgstr "Cartes d'anniversaire"
+
+msgid "Language"
+msgstr "Langue"
+
+msgid "Reminders"
+msgstr "Rappels"
+
+msgid "Log out"
+msgstr "Déconnexion"
+
+msgid "Make every birthday unforgettable. A little love goes a long way."
+msgstr ""
+
+msgid "Explore"
+msgstr "Explorer"
+
+msgid "Home"
+msgstr "Accueil"
+
+msgid "Birthday cards"
+msgstr "Cartes d'anniversaire"
+
+msgid "Company"
+msgstr "Entreprise"
+
+msgid "Supported languages"
+msgstr "Langues prises en charge"
+
+msgid "All rights reserved."
+msgstr "Tous droits réservés."
+
+msgid "Made for the moments that matter."
+msgstr "Conçu pour les moments qui comptent."
+
+msgid "Toggle navigation"
+msgstr "Basculer la navigation"
+
+msgid "Switch theme"
+msgstr "Changer de thème"
+
+msgid "Never miss a birthday"
+msgstr "Ne manquez aucun anniversaire"
+
+msgid "Add reminder"
+msgstr "Ajouter un rappel"
+
+msgid "When"
+msgstr "Quand"
+
+msgid "Status"
+msgstr "Statut"
+
+msgid "On"
+msgstr "Activé"
+
+msgid "Off"
+msgstr "Désactivé"
+
+msgid "Disable"
+msgstr "Désactiver"
+
+msgid "Enable"
+msgstr "Activer"
+
+msgid "Delete this reminder?"
+msgstr ""
+
+msgid "No reminders yet"
+msgstr "Aucun rappel"
+
+msgid "Reminders are sent by email so you can prepare a wish in time."
+msgstr ""
+
+msgid "Create a reminder"
+msgstr "Créer un rappel"
+
+msgid "Upcoming reminder dates"
+msgstr "Dates de rappel à venir"
+
+msgid "Edit reminder"
+msgstr "Modifier le rappel"
+
+msgid "Add a reminder"
+msgstr "Ajouter un rappel"
+
+msgid ""
+"Reminders are delivered by email on the day you choose, before the birthday."
+msgstr ""
+
+msgid "Save reminder"
+msgstr "Enregistrer le rappel"

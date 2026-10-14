@@ -1,0 +1,44 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% block title %}{{ birthday.recipient_name }} — {{ SITE_NAME }}{% endblock %}
+{% block content %}
+<section class="section">
+    <div class="container narrow">
+        <p class="eyebrow"><span aria-hidden="true">✳</span> {% translate "Birthday details" %}</p>
+        <div class="dashboard-header">
+            <div>
+                <h1>{{ birthday.recipient_name }}</h1>
+                <p class="muted">{{ birthday.get_relationship_display }}</p>
+            </div>
+            <div class="d-flex gap-2">
+                <a class="btn btn-outline-secondary" href="{% url 'birthdays:edit' birthday.pk %}">{% translate "Edit" %}</a>
+                <form method="post" action="{% url 'birthdays:delete' birthday.pk %}" onsubmit="return confirm('{% translate "Delete this birthday?" %}');">
+                    {% csrf_token %}
+                    <button class="btn btn-outline-danger" type="submit">{% translate "Delete" %}</button>
+                </form>
+            </div>
+        </div>
+
+        <div class="stat-grid">
+            <div class="stat-card"><span class="stat-value">{{ birthday.birthday|date:"F j" }}</span><span class="stat-label">{% if birthday.has_known_year %}{{ birthday.birth_year }} · {% endif %}{% translate "Birthday" %}</span></div>
+            <div class="stat-card"><span class="stat-value">{% if info.is_today %}{% translate "Today!" %}{% else %}{{ info.days_until }}{% endif %}</span><span class="stat-label">{% if not info.is_today %}{% translate "Days to go" %}{% endif %}</span></div>
+            <div class="stat-card">
+                <span class="stat-value">{% if info.age_turning %}{{ info.age_turning }}{% else %}—{% endif %}</span>
+                <span class="stat-label">{% translate "Turning" %}</span>
+            </div>
+        </div>
+
+        {% if birthday.notes %}
+            <div class="card-panel mt-3">
+                <div class="panel-head"><h2>{% translate "Notes" %}</h2></div>
+                <p>{{ birthday.notes|linebreaksbr }}</p>
+            </div>
+        {% endif %}
+
+        <div class="d-flex flex-wrap gap-2 mt-3">
+            <a class="btn btn-primary paveline-btn" href="{% url 'wishes:create' %}?name={{ birthday.recipient_name|urlencode }}&relationship={{ birthday.relationship }}">{% translate "Create a wish" %}</a>
+            <a class="btn btn-outline-secondary" href="{% url 'reminders:add' %}">{% translate "Set a reminder" %}</a>
+        </div>
+    </div>
+</section>
+{% endblock %}

@@ -1,0 +1,829 @@
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: paveline\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: \n"
+"Last-Translator: Paveline\n"
+"Language-Team: ar\n"
+"Language: ar\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=6; plural=(n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 && n%100<=10 ? 3 : n%100>=11 ? 4 : 5);\n"
+
+msgid "{{ days }} day"
+msgid_plural "{{ days }} days"
+msgstr[0] "{{ days }} يوم"
+msgstr[1] "يوم {{ days }}"
+msgstr[2] "يومان"
+msgstr[3] "{{ days }} أيام"
+msgstr[4] "{{ days }} يومًا"
+msgstr[5] "{{ days }} يوم"
+
+msgid "Card designer"
+msgstr "مصمّم البطاقات"
+
+msgid "Make it yours"
+msgstr ""
+
+msgid "Birthday card designer"
+msgstr "مصمّم بطاقات عيد الميلاد"
+
+msgid ""
+"Choose a design, write your message and download a PNG. No account needed."
+msgstr ""
+
+msgid "Preview"
+msgstr "معاينة"
+
+msgid "Download PNG"
+msgstr "تنزيل PNG"
+
+msgid "Your card preview will appear here."
+msgstr "ستظهر معاينة بطاقتك هنا."
+
+msgid "Card preview"
+msgstr "معاينة البطاقة"
+
+msgid "Birthday card gallery"
+msgstr "معرض بطاقات عيد الميلاد"
+
+msgid "Designs for every feeling"
+msgstr "تصاميم لكل شعور"
+
+msgid "Pick a template, add your words and download a ready-to-share card."
+msgstr ""
+
+msgid "All"
+msgstr "الكل"
+
+msgid "Happy birthday!"
+msgstr "عيد ميلاد سعيد!"
+
+msgid "Wishing you a day as lovely as you are."
+msgstr ""
+
+msgid "Use this design"
+msgstr "استخدم هذا التصميم"
+
+msgid "No templates here yet"
+msgstr ""
+
+msgid "Saved wish"
+msgstr "تهنئة محفوظة"
+
+msgid "Remove favourite"
+msgstr "إزالة من المفضلة"
+
+msgid "Add to favourites"
+msgstr "أضف إلى المفضلة"
+
+msgid "Edit note"
+msgstr "تعديل الملاحظة"
+
+msgid "A DAY AS LOVELY AS YOU"
+msgstr ""
+
+msgid "Copy wish"
+msgstr "نسخ التهنئة"
+
+msgid "WhatsApp"
+msgstr "واتساب"
+
+msgid "Make a card"
+msgstr "أنشئ بطاقة"
+
+msgid "Your note"
+msgstr "ملاحظتك"
+
+msgid "No note yet."
+msgstr ""
+
+msgid "Delete this wish?"
+msgstr ""
+
+msgid "Delete wish"
+msgstr ""
+
+msgid "Notes are private to you."
+msgstr ""
+
+msgid "Save note"
+msgstr "حفظ الملاحظة"
+
+msgid "Cancel"
+msgstr "إلغاء"
+
+msgid "Favourite wishes"
+msgstr "التهاني المفضلة"
+
+msgid "Starred"
+msgstr ""
+
+msgid "All saved wishes"
+msgstr "كل التهاني المحفوظة"
+
+msgid "No favourites yet"
+msgstr "لا توجد مفضلات بعد"
+
+msgid "Star a saved wish to find it here quickly."
+msgstr "أضف نجمة إلى تهنئة محفوظة لتجدها هنا بسرعة."
+
+msgid "Browse saved wishes"
+msgstr "تصفّح التهاني المحفوظة"
+
+msgid "Your birthday wish"
+msgstr "تهنئتك بعيد الميلاد"
+
+msgid "Step 2 — your card"
+msgstr ""
+
+msgid "Here is your wish"
+msgstr "هذه تهنئتك"
+
+msgid "Their birthday is today!"
+msgstr ""
+
+msgid "Another version"
+msgstr "نسخة أخرى"
+
+msgid "Share"
+msgstr "مشاركة"
+
+msgid "Design a card"
+msgstr "صمّم بطاقة"
+
+msgid "Save this wish"
+msgstr "احفظ هذه التهنئة"
+
+msgid "Register to save wishes"
+msgstr "سجّل لحفظ التهاني"
+
+msgid "More ideas"
+msgstr "مزيد من الأفكار"
+
+msgid "Use this version"
+msgstr "استخدم هذه النسخة"
+
+msgid "Send it their way"
+msgstr ""
+
+msgid ""
+"Copy the wish, share it on WhatsApp, or use your device's share sheet. "
+"Sharing needs no account from the recipient."
+msgstr ""
+
+msgid "Create another wish"
+msgstr "أنشئ تهنئة أخرى"
+
+msgid "Saved wishes"
+msgstr "التهاني المحفوظة"
+
+msgid "Your collection"
+msgstr "مجموعتك"
+
+msgid "Create a wish"
+msgstr "أنشئ تهنئة"
+
+msgid "All languages"
+msgstr "كل اللغات"
+
+msgid "Filter"
+msgstr "تصفية"
+
+msgid "No saved wishes yet"
+msgstr "لا توجد تهاني محفوظة بعد"
+
+msgid "Generate a wish and save it to build your collection."
+msgstr ""
+
+msgid "Create your first wish"
+msgstr "أنشئ تهنئتك الأولى"
+
+msgid "Search by recipient…"
+msgstr "ابحث حسب المستلم…"
+
+msgid "Favourite"
+msgstr "مفضل"
+
+msgid "Create a birthday wish"
+msgstr "أنشئ تهنئة عيد ميلاد"
+
+msgid "The details"
+msgstr "التفاصيل"
+
+msgid ""
+"Fill in what you know. Everything is optional except the choices — we will "
+"handle the words."
+msgstr ""
+
+msgid "Who is it for?"
+msgstr "لمن؟"
+
+msgid "The message"
+msgstr "الرسالة"
+
+msgid "Birthday date"
+msgstr ""
+
+msgid "optional"
+msgstr "اختياري"
+
+msgid ""
+"The date lets us tailor the wish and tell you if it is today. The year is "
+"optional — we never guess an age without it."
+msgstr ""
+
+msgid "Generate wish"
+msgstr "أنشئ تهنئة"
+
+msgid "Upcoming birthdays"
+msgstr "أعياد الميلاد القادمة"
+
+msgid "Next 90 days"
+msgstr "الـ90 يومًا القادمة"
+
+msgid "All birthdays"
+msgstr "كل أعياد الميلاد"
+
+msgid "Today"
+msgstr "اليوم"
+
+msgid "Wish now"
+msgstr ""
+
+msgid "turning"
+msgstr "يبلغ"
+
+msgid "Wish"
+msgstr ""
+
+msgid "Nothing coming up"
+msgstr "لا شيء قادم"
+
+msgid "No birthdays in the next 90 days."
+msgstr "لا توجد أعياد ميلاد خلال الـ90 يومًا القادمة."
+
+msgid "Add a birthday"
+msgstr "أضف عيد ميلاد"
+
+msgid "Birthday details"
+msgstr ""
+
+msgid "Edit"
+msgstr "تعديل"
+
+msgid "Delete this birthday?"
+msgstr ""
+
+msgid "Delete"
+msgstr "حذف"
+
+msgid "Birthday"
+msgstr "عيد الميلاد"
+
+msgid "Today!"
+msgstr "اليوم!"
+
+msgid "Days to go"
+msgstr "الأيام المتبقية"
+
+msgid "Turning"
+msgstr "يبلغ"
+
+msgid "Notes"
+msgstr "ملاحظات"
+
+msgid "Set a reminder"
+msgstr ""
+
+msgid "My birthdays"
+msgstr "أعياد ميلادي"
+
+msgid "Birthday manager"
+msgstr "مدير أعياد الميلاد"
+
+msgid "Saved birthdays"
+msgstr "أعياد الميلاد المحفوظة"
+
+msgid "Upcoming"
+msgstr "القادمة"
+
+msgid "Add birthday"
+msgstr "أضف عيد ميلاد"
+
+msgid "All relationships"
+msgstr "كل العلاقات"
+
+msgid "Sort: name"
+msgstr "ترتيب: الاسم"
+
+msgid "Sort: recently added"
+msgstr "ترتيب: أُضيفت حديثًا"
+
+msgid "Apply"
+msgstr ""
+
+msgid "Name"
+msgstr "الاسم"
+
+msgid "Date"
+msgstr "التاريخ"
+
+msgid "Relationship"
+msgstr "العلاقة"
+
+msgid "No birthdays saved yet"
+msgstr "لا توجد أعياد ميلاد محفوظة بعد"
+
+msgid "Add the people you never want to forget."
+msgstr ""
+
+msgid "Add your first birthday"
+msgstr "أضف أول عيد ميلاد"
+
+msgid "Search name or notes…"
+msgstr "ابحث عن اسم أو ملاحظات…"
+
+msgid "Edit birthday"
+msgstr "تعديل عيد الميلاد"
+
+msgid "Save birthday"
+msgstr "حفظ عيد الميلاد"
+
+msgid "Dashboard"
+msgstr "لوحة التحكم"
+
+msgid "Your dashboard"
+msgstr "لوحة التحكم الخاصة بك"
+
+msgid "Welcome back"
+msgstr "مرحبًا بعودتك"
+
+msgid "Favourites"
+msgstr "المفضلة"
+
+msgid "Active reminders"
+msgstr ""
+
+msgid "Today & upcoming"
+msgstr ""
+
+msgid "View all"
+msgstr ""
+
+msgid "No upcoming birthdays yet."
+msgstr "لا توجد أعياد ميلاد قادمة بعد."
+
+msgid "Add one"
+msgstr ""
+
+msgid "Recent wishes"
+msgstr "التهاني الأخيرة"
+
+msgid "You have not saved any wishes yet."
+msgstr ""
+
+msgid "Create one"
+msgstr ""
+
+msgid "Privacy Policy"
+msgstr "سياسة الخصوصية"
+
+msgid "Your privacy matters."
+msgstr ""
+
+msgid ""
+"This policy explains what Paveline stores and why. It is written plainly on "
+"purpose."
+msgstr ""
+
+msgid "Generating wishes as a guest"
+msgstr "إنشاء التهاني كزائر"
+
+msgid ""
+"When you generate a wish without an account, your recipient's details are "
+"used only for that request and are not stored in our database. The wish text"
+" is generated from local templates."
+msgstr ""
+
+msgid "If you create an account"
+msgstr ""
+
+msgid ""
+"We store the account details you provide, plus any birthdays, wishes, "
+"favourites or reminders you choose to save. This data is visible only to you"
+" and is never shown on public pages."
+msgstr ""
+
+msgid "Uploaded images"
+msgstr ""
+
+msgid ""
+"Photos you upload while designing a card are used solely to render that "
+"card. They are not shared with other users."
+msgstr ""
+
+msgid "Contact"
+msgstr "اتصل بنا"
+
+msgid ""
+"For any privacy request, please use the contact page and we will respond."
+msgstr ""
+
+msgid "Terms of Service"
+msgstr "شروط الخدمة"
+
+msgid "Terms of use"
+msgstr ""
+
+msgid "By using Paveline you agree to use it responsibly and lawfully."
+msgstr ""
+
+msgid "Your content"
+msgstr ""
+
+msgid ""
+"You are responsible for the content you create and share. Do not use the "
+"service to send harmful, abusive or unlawful messages."
+msgstr ""
+
+msgid "Accounts"
+msgstr ""
+
+msgid ""
+"Keep your login details secure. You are responsible for activity on your "
+"account."
+msgstr ""
+
+msgid "Availability"
+msgstr ""
+
+msgid ""
+"Paveline is provided as-is. Features may change as the service improves."
+msgstr ""
+
+msgid "We would love to hear from you."
+msgstr ""
+
+msgid ""
+"Questions, ideas or feedback? Send us a message and we will get back to you."
+msgstr ""
+
+msgid "Send message"
+msgstr "إرسال الرسالة"
+
+msgid "About"
+msgstr "حول"
+
+msgid "About Paveline"
+msgstr ""
+
+msgid "Thoughtful birthday wishes, made simple."
+msgstr ""
+
+msgid ""
+"Paveline helps you say the right thing on the days that matter. Write, "
+"personalise and share birthday wishes and cards in any of our supported "
+"languages — no account required."
+msgstr ""
+"يساعدك Paveline على قول الشيء الصحيح في الأيام المهمة. اكتب وخصّص وشارك "
+"التهاني والبطاقات بكل لغاتنا — دون حاجة إلى حساب."
+
+msgid "Personal"
+msgstr ""
+
+msgid ""
+"Wishes adapt to the recipient's name, relationship and the tone you choose."
+msgstr ""
+
+msgid "Multilingual"
+msgstr ""
+
+msgid ""
+"Natural message templates in English, Kiswahili, French, Spanish and Arabic."
+msgstr ""
+
+msgid "Private by default"
+msgstr ""
+
+msgid "Generate wishes as a guest. Save them only if you create an account."
+msgstr ""
+
+msgid "Make Every Birthday Unforgettable"
+msgstr "اجعل كل عيد ميلاد لا يُنسى"
+
+msgid "A little love goes a long way"
+msgstr ""
+
+msgid "Make Every Birthday"
+msgstr "اجعل كل عيد ميلاد"
+
+msgid "Unforgettable!"
+msgstr "لا يُنسى!"
+
+msgid ""
+"Create beautiful, personalized birthday wishes and greeting cards for the "
+"people who matter most."
+msgstr "أنشئ تهاني وبطاقات عيد ميلاد جميلة ومخصّصة لأهم الناس لديك."
+
+msgid "Create a Birthday Wish"
+msgstr "أنشئ تهنئة عيد ميلاد"
+
+msgid "Explore Birthday Cards"
+msgstr "استكشف بطاقات عيد الميلاد"
+
+msgid "relationships"
+msgstr "علاقات"
+
+msgid "message styles"
+msgstr "أنماط الرسائل"
+
+msgid "languages"
+msgstr "لغات"
+
+msgid "TODAY IS ALL ABOUT YOU"
+msgstr ""
+
+msgid "with love, always"
+msgstr "مع الحب دائمًا"
+
+msgid "Your words, your way"
+msgstr "كلماتك، على طريقتك"
+
+msgid "from the heart."
+msgstr "من القلب."
+
+msgid "Make it personal. Make it lovely. Make it theirs."
+msgstr "اجعله شخصيًا. اجعله جميلًا. اجعله له."
+
+msgid "Create my wish"
+msgstr "أنشئ تهنئتي"
+
+msgid ""
+"Your details stay private. Wish generation runs without sending recipient "
+"data to third parties."
+msgstr ""
+"تبقى بياناتك خاصة. لا يرسل إنشاء التهنئة بيانات المستلم إلى أطراف ثالثة."
+
+msgid "Pick a feeling"
+msgstr "اختر شعورًا"
+
+msgid "Popular card templates"
+msgstr "قوالب البطاقات الشائعة"
+
+msgid "Card templates are on their way."
+msgstr ""
+
+msgid "See all templates"
+msgstr "عرض كل القوالب"
+
+msgid "For everyone you love"
+msgstr ""
+
+msgid "Birthday wish categories"
+msgstr ""
+
+msgid "Easy as one, two, yay"
+msgstr "سهل كواحد، اثنان، يا!"
+
+msgid "Made in minutes"
+msgstr "يُنجز في دقائق"
+
+msgid "Enter the details"
+msgstr "أدخل التفاصيل"
+
+msgid "Add the recipient's name, date and relationship."
+msgstr "أضف اسم المستلم والتاريخ والعلاقة."
+
+msgid "Choose style & language"
+msgstr "اختر النمط واللغة"
+
+msgid "Select a tone and the language that fits."
+msgstr "اختر نبرة واللغة المناسبة."
+
+msgid "Generate the wish"
+msgstr "أنشئ التهنئة"
+
+msgid "Get a personalised wish in seconds."
+msgstr "احصل على تهنئة مخصصة في ثوانٍ."
+
+msgid "Customize & share"
+msgstr "خصّص وشارك"
+
+msgid "Turn it into a card, copy it or share on WhatsApp."
+msgstr "حوّله إلى بطاقة، انسخه أو شاركه على واتساب."
+
+msgid "Thanks for using Paveline."
+msgstr ""
+
+msgid "Hello {{ user }},"
+msgstr ""
+
+msgid ""
+"You are receiving this email because you requested a password reset for your"
+" Paveline account."
+msgstr ""
+
+msgid "Please go to the following page and choose a new password:"
+msgstr ""
+
+msgid ""
+"If you did not request a password reset, you can safely ignore this email."
+msgstr ""
+
+msgid "Email sent"
+msgstr "تم إرسال البريد"
+
+msgid "Check your email"
+msgstr "تحقق من بريدك الإلكتروني"
+
+msgid ""
+"If an account exists for that email, we have sent a link to reset your "
+"password. Please check your inbox and spam folder."
+msgstr ""
+
+msgid "Back to login"
+msgstr "العودة إلى تسجيل الدخول"
+
+msgid "Password reset"
+msgstr "إعادة تعيين كلمة المرور"
+
+msgid "Reset your password"
+msgstr "أعد تعيين كلمة المرور"
+
+msgid "Enter your account email and we will send a reset link."
+msgstr ""
+
+msgid "Send reset link"
+msgstr "إرسال رابط الإعادة"
+
+msgid "Profile"
+msgstr "الملف الشخصي"
+
+msgid "Your settings"
+msgstr "إعداداتك"
+
+msgid "Profile settings"
+msgstr "إعدادات الملف الشخصي"
+
+msgid "Save changes"
+msgstr "حفظ التغييرات"
+
+msgid "Set a new password"
+msgstr "عيّن كلمة مرور جديدة"
+
+msgid "Change password"
+msgstr "تغيير كلمة المرور"
+
+msgid "This link has expired"
+msgstr ""
+
+msgid ""
+"The reset link is invalid or has already been used. Please request a new "
+"one."
+msgstr ""
+
+msgid "Request a new link"
+msgstr "اطلب رابطًا جديدًا"
+
+msgid "Register"
+msgstr "إنشاء حساب"
+
+msgid "Create your account"
+msgstr "أنشئ حسابك"
+
+msgid ""
+"Optional — you can always generate wishes as a guest. An account lets you "
+"save birthdays, wishes and reminders."
+msgstr ""
+
+msgid "Create account"
+msgstr "إنشاء حساب"
+
+msgid "Already have an account?"
+msgstr "لديك حساب بالفعل؟"
+
+msgid "Login"
+msgstr "تسجيل الدخول"
+
+msgid "Password changed"
+msgstr "تم تغيير كلمة المرور"
+
+msgid ""
+"Your password has been updated. You can now log in with your new password."
+msgstr ""
+
+msgid "Log in to manage birthdays, wishes and reminders."
+msgstr ""
+
+msgid "Forgot your password?"
+msgstr "هل نسيت كلمة المرور؟"
+
+msgid "New here?"
+msgstr "هل أنت جديد؟"
+
+msgid "Create an account"
+msgstr "إنشاء حساب"
+
+msgid "Skip to content"
+msgstr "تخطَّ إلى المحتوى"
+
+msgid "Create Wish"
+msgstr "أنشئ تهنئة"
+
+msgid "Birthday Cards"
+msgstr "بطاقات عيد الميلاد"
+
+msgid "Language"
+msgstr "اللغة"
+
+msgid "Reminders"
+msgstr "التذكيرات"
+
+msgid "Log out"
+msgstr "تسجيل الخروج"
+
+msgid "Make every birthday unforgettable. A little love goes a long way."
+msgstr ""
+
+msgid "Explore"
+msgstr "استكشف"
+
+msgid "Home"
+msgstr "الرئيسية"
+
+msgid "Birthday cards"
+msgstr "بطاقات عيد الميلاد"
+
+msgid "Company"
+msgstr "الشركة"
+
+msgid "Supported languages"
+msgstr "اللغات المدعومة"
+
+msgid "All rights reserved."
+msgstr "جميع الحقوق محفوظة."
+
+msgid "Made for the moments that matter."
+msgstr "صُنع للحظات التي تهم."
+
+msgid "Toggle navigation"
+msgstr "تبديل التنقل"
+
+msgid "Switch theme"
+msgstr "تبديل المظهر"
+
+msgid "Never miss a birthday"
+msgstr "لا تفوّت أي عيد ميلاد"
+
+msgid "Add reminder"
+msgstr "أضف تذكيرًا"
+
+msgid "When"
+msgstr "متى"
+
+msgid "Status"
+msgstr "الحالة"
+
+msgid "On"
+msgstr "مفعّل"
+
+msgid "Off"
+msgstr "معطّل"
+
+msgid "Disable"
+msgstr "تعطيل"
+
+msgid "Enable"
+msgstr "تفعيل"
+
+msgid "Delete this reminder?"
+msgstr ""
+
+msgid "No reminders yet"
+msgstr "لا توجد تذكيرات بعد"
+
+msgid "Reminders are sent by email so you can prepare a wish in time."
+msgstr ""
+
+msgid "Create a reminder"
+msgstr "أنشئ تذكيرًا"
+
+msgid "Upcoming reminder dates"
+msgstr "تواريخ التذكير القادمة"
+
+msgid "Edit reminder"
+msgstr "تعديل التذكير"
+
+msgid "Add a reminder"
+msgstr "أضف تذكيرًا"
+
+msgid ""
+"Reminders are delivered by email on the day you choose, before the birthday."
+msgstr ""
+
+msgid "Save reminder"
+msgstr "حفظ التذكير"

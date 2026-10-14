@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% block title %}{% if is_edit %}{% translate "Edit reminder" %}{% else %}{% translate "Add reminder" %}{% endif %} — {{ SITE_NAME }}{% endblock %}
+{% block content %}
+<section class="section">
+    <div class="container narrow">
+        <p class="eyebrow"><span aria-hidden="true">✳</span> {% translate "Reminders" %}</p>
+        <h1>{% if is_edit %}{% translate "Edit reminder" %}{% else %}{% translate "Add a reminder" %}{% endif %}</h1>
+        <p class="muted">{% translate "Reminders are delivered by email on the day you choose, before the birthday." %}</p>
+        <form method="post" class="card-panel" novalidate>
+            {% csrf_token %}
+            <div class="row g-3">
+                <div class="col-md-6">{% with field=form.birthday %}{% include "partials/_field.html" %}{% endwith %}</div>
+                <div class="col-md-6">{% with field=form.offset_days %}{% include "partials/_field.html" %}{% endwith %}</div>
+            </div>
+            {% with field=form.is_enabled %}{% include "partials/_field.html" %}{% endwith %}
+            <div class="d-flex gap-2">
+                <button class="btn btn-primary paveline-btn" type="submit">{% translate "Save reminder" %}</button>
+                <a class="btn btn-outline-secondary" href="{% url 'reminders:list' %}">{% translate "Cancel" %}</a>
+            </div>
+        </form>
+    </div>
+</section>
+{% endblock %}

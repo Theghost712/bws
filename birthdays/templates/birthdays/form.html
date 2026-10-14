@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% block title %}{% if is_edit %}{% translate "Edit birthday" %}{% else %}{% translate "Add birthday" %}{% endif %} — {{ SITE_NAME }}{% endblock %}
+{% block content %}
+<section class="section">
+    <div class="container narrow">
+        <p class="eyebrow"><span aria-hidden="true">✳</span> {% translate "Birthday manager" %}</p>
+        <h1>{% if is_edit %}{% translate "Edit birthday" %}{% else %}{% translate "Add a birthday" %}{% endif %}</h1>
+        <form method="post" class="card-panel" novalidate>
+            {% csrf_token %}
+            {% if form.non_field_errors %}<div class="alert alert-danger">{{ form.non_field_errors }}</div>{% endif %}
+            <div class="row g-3">
+                <div class="col-md-8">{% with field=form.recipient_name %}{% include "partials/_field.html" %}{% endwith %}</div>
+                <div class="col-md-4">{% with field=form.relationship %}{% include "partials/_field.html" %}{% endwith %}</div>
+            </div>
+            <div class="row g-3">
+                <div class="col-md-4">{% with field=form.birth_month %}{% include "partials/_field.html" %}{% endwith %}</div>
+                <div class="col-md-4">{% with field=form.birth_day %}{% include "partials/_field.html" %}{% endwith %}</div>
+                <div class="col-md-4">{% with field=form.birth_year %}{% include "partials/_field.html" %}{% endwith %}</div>
+            </div>
+            {% with field=form.notes %}{% include "partials/_field.html" %}{% endwith %}
+            <div class="d-flex gap-2">
+                <button class="btn btn-primary paveline-btn" type="submit">{% translate "Save birthday" %}</button>
+                <a class="btn btn-outline-secondary" href="{% url 'birthdays:list' %}">{% translate "Cancel" %}</a>
+            </div>
+        </form>
+    </div>
+</section>
+{% endblock %}

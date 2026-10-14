@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% block title %}{% translate "Edit note" %} — {{ SITE_NAME }}{% endblock %}
+{% block content %}
+<section class="section">
+    <div class="container narrow">
+        <p class="eyebrow"><span aria-hidden="true">✳</span> {% translate "Your note" %}</p>
+        <h1>{% translate "Edit note" %}</h1>
+        <p class="muted">{% translate "Notes are private to you." %}</p>
+        <form method="post" class="card-panel" novalidate>
+            {% csrf_token %}
+            {% with field=form.note %}{% include "partials/_field.html" %}{% endwith %}
+            <div class="d-flex gap-2">
+                <button class="btn btn-primary paveline-btn" type="submit">{% translate "Save note" %}</button>
+                <a class="btn btn-outline-secondary" href="{% url 'wishes:saved_detail' wish.pk %}">{% translate "Cancel" %}</a>
+            </div>
+        </form>
+    </div>
+</section>
+{% endblock %}

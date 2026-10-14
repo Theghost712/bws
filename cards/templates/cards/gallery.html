@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% block title %}{% translate "Birthday card gallery" %} — {{ SITE_NAME }}{% endblock %}
+{% block content %}
+<section class="section">
+    <div class="container">
+        <div class="section-heading text-center">
+            <p class="eyebrow justify-content-center"><span aria-hidden="true">✳</span> {% translate "Designs for every feeling" %}</p>
+            <h1>{% translate "Birthday card gallery" %}</h1>
+            <p>{% translate "Pick a template, add your words and download a ready-to-share card." %}</p>
+        </div>
+
+        <div class="filter-chips">
+            <a class="chip {% if not category %}active{% endif %}" href="{% url 'cards:gallery' %}">{% translate "All" %}</a>
+            {% for value, label in categories %}
+                <a class="chip {% if category == value %}active{% endif %}" href="{% url 'cards:gallery' %}?category={{ value }}">{{ label }}</a>
+            {% endfor %}
+        </div>
+
+        <div class="row g-4">
+            {% for template in templates %}
+                <div class="col-sm-6 col-lg-4">
+                    <article class="template-card">
+                        <div class="template-preview" style="background: linear-gradient(140deg, {{ template.background }}, {{ template.background_secondary }});">
+                            <span style="color: {{ template.accent }};" class="template-preview-title">{% translate "Happy birthday!" %}</span>
+                            <span style="color: {{ template.text_color }};" class="template-preview-line">{% translate "Wishing you a day as lovely as you are." %}</span>
+                        </div>
+                        <div class="template-body">
+                            <h3>{{ template.name }}</h3>
+                            <p class="muted">{{ template.get_category_display }} · {{ template.get_orientation_display }}</p>
+                            <a class="btn btn-primary paveline-btn w-100" href="{% url 'cards:designer' %}?template={{ template.slug }}">{% translate "Use this design" %}</a>
+                        </div>
+                    </article>
+                </div>
+            {% empty %}
+                <div class="col-12"><div class="empty-state-box"><h3>{% translate "No templates here yet" %}</h3></div></div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+{% endblock %}

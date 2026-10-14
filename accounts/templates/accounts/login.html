@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% block title %}{% translate "Login" %} — {{ SITE_NAME }}{% endblock %}
+{% block content %}
+<section class="section">
+    <div class="container auth-card-wrap">
+        <div class="card-panel auth-card">
+            <h1>{% translate "Welcome back" %}</h1>
+            <p class="muted">{% translate "Log in to manage birthdays, wishes and reminders." %}</p>
+            {% if form.non_field_errors %}<div class="alert alert-danger">{{ form.non_field_errors }}</div>{% endif %}
+            <form method="post" novalidate>
+                {% csrf_token %}
+                {% with field=form.username %}{% include "partials/_field.html" %}{% endwith %}
+                {% with field=form.password %}{% include "partials/_field.html" %}{% endwith %}
+                <input type="hidden" name="next" value="{{ next }}">
+                <button class="btn btn-primary paveline-btn w-100" type="submit">{% translate "Login" %}</button>
+            </form>
+            <p class="auth-alt"><a href="{% url 'accounts:password_reset' %}">{% translate "Forgot your password?" %}</a></p>
+            <p class="auth-alt">{% translate "New here?" %} <a href="{% url 'accounts:register' %}">{% translate "Create an account" %}</a></p>
+        </div>
+    </div>
+</section>
+{% endblock %}

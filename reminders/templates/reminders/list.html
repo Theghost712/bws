@@ -1,0 +1,61 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% block title %}{% translate "Reminders" %} — {{ SITE_NAME }}{% endblock %}
+{% block content %}
+<section class="section">
+    <div class="container">
+        <div class="dashboard-header">
+            <div><p class="eyebrow"><span aria-hidden="true">✳</span> {% translate "Never miss a birthday" %}</p><h1>{% translate "Reminders" %}</h1></div>
+            <a class="btn btn-primary paveline-btn" href="{% url 'reminders:add' %}">{% translate "Add reminder" %}</a>
+        </div>
+
+        {% if reminders %}
+            <div class="table-responsive">
+                <table class="table align-middle paveline-table">
+                    <thead><tr><th>{% translate "Birthday" %}</th><th>{% translate "When" %}</th><th>{% translate "Status" %}</th><th></th></tr></thead>
+                    <tbody>
+                        {% for reminder in reminders %}
+                            <tr>
+                                <td>{{ reminder.birthday.recipient_name }}</td>
+                                <td>{{ reminder.get_offset_days_display }}</td>
+                                <td>
+                                    {% if reminder.is_enabled %}<span class="badge text-bg-success">{% translate "On" %}</span>
+                                    {% else %}<span class="badge text-bg-secondary">{% translate "Off" %}</span>{% endif %}
+                                </td>
+                                <td class="text-end">
+                                    <form method="post" action="{% url 'reminders:toggle' reminder.pk %}" class="d-inline">
+                                        {% csrf_token %}
+                                        <button class="btn btn-sm btn-outline-secondary" type="submit">{% if reminder.is_enabled %}{% translate "Disable" %}{% else %}{% translate "Enable" %}{% endif %}</button>
+                                    </form>
+                                    <a class="btn btn-sm btn-outline-secondary" href="{% url 'reminders:edit' reminder.pk %}">{% translate "Edit" %}</a>
+                                    <form method="post" action="{% url 'reminders:delete' reminder.pk %}" class="d-inline" onsubmit="return confirm('{% translate "Delete this reminder?" %}');">
+                                        {% csrf_token %}
+                                        <button class="btn btn-sm btn-outline-danger" type="submit">{% translate "Delete" %}</button>
+                                    </form>
+                                </td>
+                            </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        {% else %}
+            <div class="empty-state-box">
+                <h3>{% translate "No reminders yet" %}</h3>
+                <p>{% translate "Reminders are sent by email so you can prepare a wish in time." %}</p>
+                <a class="btn btn-primary paveline-btn" href="{% url 'reminders:add' %}">{% translate "Create a reminder" %}</a>
+            </div>
+        {% endif %}
+
+        {% if upcoming %}
+            <div class="card-panel mt-4">
+                <div class="panel-head"><h2>{% translate "Upcoming reminder dates" %}</h2></div>
+                <ul class="simple-list">
+                    {% for item in upcoming %}
+                        <li>{{ item.reminder.birthday.recipient_name }} — {{ item.reminder.get_offset_days_display }} <span class="muted">{{ item.date|date:"M j, Y" }}</span></li>
+                    {% endfor %}
+                </ul>
+            </div>
+        {% endif %}
+    </div>
+</section>
+{% endblock %}

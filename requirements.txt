@@ -1,0 +1,13 @@
+# Core
+Django>=5.2,<6.0
+python-dotenv>=1.0
+Pillow>=10.3
+
+# Arabic text shaping for server-rendered cards (optional but recommended)
+arabic-reshaper>=3.0
+python-bidi>=0.4
+
+# Production database driver (optional; install manually, needs system libs):
+# mysqlclient>=2.2
+# Production WSGI server (optional):
+# gunicorn>=22.0

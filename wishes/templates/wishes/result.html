@@ -1,0 +1,74 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% block title %}{% translate "Your birthday wish" %} — {{ SITE_NAME }}{% endblock %}
+{% block content %}
+<section class="section">
+    <div class="container">
+        <div class="section-heading text-center">
+            <p class="eyebrow justify-content-center"><span aria-hidden="true">✳</span> {% translate "Step 2 — your card" %}</p>
+            <h1>{% translate "Here is your wish" %}</h1>
+            {% if wish.is_today %}<p class="badge text-bg-success">{% translate "Their birthday is today!" %}</p>{% endif %}
+        </div>
+
+        <div class="row g-4 justify-content-center">
+            <div class="col-lg-7">
+                <article class="birthday-card result-card" id="birthday-card">
+                    <span class="card-overline">{% translate "A DAY AS LOVELY AS YOU" %}</span>
+                    <h2 class="card-title">{{ wish.heading }}</h2>
+                    <p class="wish-message">{{ wish.message }}</p>
+                    <span class="card-signoff">{{ wish.signoff }}</span>
+                </article>
+
+                <div class="result-actions">
+                    <a class="btn btn-outline-secondary" href="{% url 'wishes:result' %}?v={{ variation|add:1 }}">⟳ {% translate "Another version" %}</a>
+                    <button class="btn btn-outline-secondary" type="button" data-copy-source="#wish-share-text">▢ {% translate "Copy wish" %}</button>
+                    <a class="btn btn-whatsapp" target="_blank" rel="noopener noreferrer"
+                       href="https://wa.me/?text={{ share_text|urlencode }}">↗ {% translate "WhatsApp" %}</a>
+                    <button class="btn btn-outline-secondary" type="button" data-web-share data-copy-source="#wish-share-text">{% translate "Share" %}</button>
+                </div>
+                <p class="action-status" id="action-status" role="status" aria-live="polite"></p>
+                <textarea id="wish-share-text" class="visually-hidden" readonly>{{ share_text }}</textarea>
+
+                <div class="d-flex flex-wrap gap-2 mt-2">
+                    <a class="btn btn-primary paveline-btn" href="{% url 'cards:designer' %}?message={{ wish.message|urlencode }}&recipient_name={{ wish.recipient_name|urlencode }}&heading={{ wish.heading|urlencode }}&language={{ wish.language }}&sender_name={{ wish.sender_name|urlencode }}">{% translate "Design a card" %}</a>
+                    {% if user.is_authenticated %}
+                        <form method="post" action="{% url 'wishes:save' %}">
+                            {% csrf_token %}
+                            <input type="hidden" name="recipient_name" value="{{ wish.recipient_name }}">
+                            <input type="hidden" name="relationship" value="{{ wish.relationship }}">
+                            <input type="hidden" name="tone" value="{{ wish.tone }}">
+                            <input type="hidden" name="language" value="{{ wish.language }}">
+                            <input type="hidden" name="length" value="{{ wish.length }}">
+                            <input type="hidden" name="sender_name" value="{{ wish.sender_name }}">
+                            <input type="hidden" name="personal_message" value="{{ wish.personal_message }}">
+                            <input type="hidden" name="message" value="{{ wish.message }}">
+                            <button class="btn btn-outline-primary" type="submit">{% translate "Save this wish" %}</button>
+                        </form>
+                    {% else %}
+                        <a class="btn btn-outline-primary" href="{% url 'accounts:register' %}">{% translate "Register to save wishes" %}</a>
+                    {% endif %}
+                </div>
+            </div>
+
+            <div class="col-lg-5">
+                <div class="card-panel">
+                    <div class="panel-head"><h2>{% translate "More ideas" %}</h2></div>
+                    <ul class="alternative-list">
+                        {% for option in alternatives %}
+                            <li>
+                                <p>{{ option.message }}</p>
+                                <a href="{% url 'wishes:result' %}?v={{ forloop.counter0 }}">{% translate "Use this version" %}</a>
+                            </li>
+                        {% endfor %}
+                    </ul>
+                </div>
+                <div class="card-panel mt-3">
+                    <div class="panel-head"><h2>{% translate "Send it their way" %}</h2></div>
+                    <p class="muted">{% translate "Copy the wish, share it on WhatsApp, or use your device's share sheet. Sharing needs no account from the recipient." %}</p>
+                    <a class="btn btn-outline-secondary w-100" href="{% url 'wishes:create' %}">{% translate "Create another wish" %}</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
