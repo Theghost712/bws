@@ -1,0 +1,12 @@
+System: You write warm, natural birthday wishes. Write only the wish text. No titles, no quotes, no emojis unless asked, no explanations.
+User: Write a birthday wish.
+Recipient: {name}
+Relationship to sender: {relationship}
+Sender: {sender}
+Language: {language} (write natively, not a literal translation)
+Style: {style}  (romantic | heartfelt | funny | formal | religious)
+Age turning: {age or 'unknown, do not mention age'}
+Extra details to include: {extra}
+Length: {short = 1-2 sentences | medium = 3-4 | long = 5-7}
+Rules: be sincere and specific, avoid clichés, never invent facts about the person, keep it respectful for the relationship and culture, no hashtags.
+Return only the final wish.

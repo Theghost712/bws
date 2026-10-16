@@ -1,0 +1,47 @@
+Manual Testing Checklist
+
+Core Functionality
+[ ] Bot starts without errors with valid config
+[ ] /start command works and responds
+[ ] /help command shows all commands
+[ ] /wish <name> generates a wish with guided flow
+[ ] Can select style, language, relationship via inline buttons
+[ ] Card generation produces image of correct size (1080x1080)
+[ ] Card saves to output/ directory
+[ ] /add birthday works end-to-end
+[ ] /list shows upcoming birthdays correctly
+[ ] /remove deletes birthday
+[ ] /language changes preference
+[ ] /remind toggles reminders
+
+Date Logic (Edge Cases)
+[ ] 29 February birthday in leap year (2024) works
+[ ] 29 February birthday in non-leap year (2026) maps to 28 Feb
+[ ] Birthday today detection works
+[ ] Upcoming birthdays sorted correctly
+
+AI & Fallback
+[ ] Works with Ollama if available
+[ ] Falls back to templates if AI fails
+[ ] Dry-run mode doesn't send messages
+[ ] 3 variants generated for wishes
+
+Multi-language
+[ ] All 5 languages (en, sw, fr, es, ar) produce correct output
+[ ] Arabic text renders properly (if fonts available)
+
+Cards
+[ ] All 6 designs (romantic, elegant, colorful, children, religious, modern) work
+[ ] Arabic text shaping works with arabic-reshaper/python-bidi
+[ ] Graceful fallback if fonts missing
+
+Scheduler
+[ ] Daily job finds today's birthdays
+[ ] Idempotent - running twice doesn't duplicate
+[ ] Reminders work for N days before
+
+Privacy & Safety
+[ ] /deleteme erases user data
+[ ] Extra text is sanitized
+[ ] No personal data sent beyond required fields
+[ ] Admin commands protected

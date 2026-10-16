@@ -1,0 +1,13 @@
+Architecture
+
+Paveline Bot is a modular, async-friendly Python application for automated birthday wishes and card generation. The architecture follows clean separation of concerns:
+
+- **Core**: Business logic for date handling (with leap year support), wish generation, validation, and fallback templates
+- **AI Layer**: Provider-agnostic abstraction with multiple free providers (Gemini, Groq, OpenRouter, Ollama) and automatic fallback to local templates
+- **Cards**: Pillow-based card rendering with multiple designs, Arabic text shaping support, and multiple output sizes
+- **Channels**: Pluggable sender interface supporting Telegram, Email, and WhatsApp link generation
+- **Database**: SQLAlchemy ORM with SQLite for users, birthdays, and sent log tracking
+- **Scheduler**: APScheduler for automated daily birthday checks and reminders
+- **Telegram**: python-telegram-bot v20+ for interactive commands with inline keyboards
+
+The bot prioritizes reliability - if AI providers fail, it always falls back to offline templates. All operations are designed to be idempotent and privacy-conscious.
