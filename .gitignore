@@ -9,3 +9,8 @@ media/
 .DS_Store
 
 .vercel
+
+# Tooling artifacts (installed by Vercel integrations)
+.agents/
+.claude/
+skills-lock.json

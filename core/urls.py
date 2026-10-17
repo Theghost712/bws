@@ -11,4 +11,5 @@ urlpatterns = [
     path("privacy/", views.PrivacyView.as_view(), name="privacy"),
     path("terms/", views.TermsView.as_view(), name="terms"),
     path("dashboard/", views.dashboard, name="dashboard"),
+    path("cron/send-reminders/", views.send_reminders_cron, name="send_reminders_cron"),
 ]

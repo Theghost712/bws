@@ -1,7 +1,13 @@
+import hmac
+import os
+
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
+from django.core.management import call_command
+from django.http import HttpResponse, HttpResponseForbidden
 from django.shortcuts import redirect, render
 from django.utils import timezone
+from django.views.decorators.http import require_GET
 from django.views.generic import TemplateView
 
 from birthdays.models import Birthday
@@ -81,3 +87,26 @@ def dashboard(request):
         "recent_wishes": BirthdayWish.objects.filter(owner=request.user)[:4],
     }
     return render(request, "core/dashboard.html", context)
+
+
+@require_GET
+def send_reminders_cron(request):
+    """Endpoint hit by the Vercel Cron job to send due birthday reminders.
+
+    Vercel sends ``Authorization: Bearer <CRON_SECRET>`` on cron requests when
+    the ``CRON_SECRET`` environment variable is set. We require that secret so
+    the endpoint cannot be triggered by the public.
+    """
+    expected = os.environ.get("CRON_SECRET")
+    if not expected:
+        return HttpResponseForbidden("CRON_SECRET not configured")
+
+    supplied = request.headers.get("Authorization", "")
+    if not hmac.compare_digest(supplied, f"Bearer {expected}"):
+        return HttpResponseForbidden("Forbidden")
+
+    from io import StringIO
+
+    out = StringIO()
+    call_command("send_reminders", stdout=out)
+    return HttpResponse(out.getvalue(), content_type="text/plain")

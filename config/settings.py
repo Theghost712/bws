@@ -189,6 +189,7 @@ LOGOUT_REDIRECT_URL = "core:home"
 # ---------------------------------------------------------------------------
 SITE_EMAIL = os.environ.get("SITE_EMAIL", "menyendoyemigaru@gmail.com")
 SITE_PHONE = os.environ.get("SITE_PHONE", "+255 747 433 510")
+SITE_BASE_URL = os.environ.get("SITE_BASE_URL", "http://127.0.0.1:8000").rstrip("/")
 
 # ---------------------------------------------------------------------------
 # Email (console backend locally, SMTP in production)
