@@ -1,5 +1,7 @@
+import os
+
 from django.contrib.auth.models import User
-from django.test import TestCase
+from django.test import TestCase, override_settings
 from django.urls import reverse
 
 from .models import ContactMessage
@@ -76,3 +78,88 @@ class LanguageTests(TestCase):
         self.assertContains(response, "Accueil")
         response = self.client.get(reverse("core:home"), headers={"accept-language": "sw"})
         self.assertContains(response, "Nyumbani")
+
+
+class RobotsTxtTests(TestCase):
+    def test_robots_txt_served(self):
+        response = self.client.get("/robots.txt")
+        self.assertEqual(response.status_code, 200)
+        self.assertEqual(response["Content-Type"], "text/plain")
+        self.assertIn("User-agent: *", response.content.decode())
+        self.assertIn("Disallow: /admin/", response.content.decode())
+        self.assertIn("Sitemap:", response.content.decode())
+
+    def test_robots_txt_points_at_sitemap(self):
+        response = self.client.get("/robots.txt")
+        self.assertIn("Sitemap: http://testserver/sitemap.xml", response.content.decode())
+
+
+class SitemapTests(TestCase):
+    def test_sitemap_xml_served(self):
+        response = self.client.get("/sitemap.xml")
+        self.assertEqual(response.status_code, 200)
+        self.assertIn("application/xml", response["Content-Type"])
+        body = response.content.decode()
+        self.assertIn("<urlset", body)
+        self.assertIn("https://testserver/", body)
+
+    def test_sitemap_lists_public_pages_only(self):
+        response = self.client.get("/sitemap.xml")
+        body = response.content.decode()
+        self.assertIn("/wishes/create/", body)
+        self.assertIn("/cards/", body)
+        # Authenticated-only areas must not be advertised.
+        self.assertNotIn("/admin/", body)
+        self.assertNotIn("/birthdays/", body)
+        self.assertNotIn("/reminders/", body)
+
+
+class CronRemindersTests(TestCase):
+    @override_settings(DEBUG=False)
+    def test_no_secret_configured_forbids(self):
+        os.environ.pop("CRON_SECRET", None)
+        response = self.client.get("/cron/send-reminders/")
+        self.assertEqual(response.status_code, 403)
+
+    @override_settings(DEBUG=False)
+    def test_missing_auth_header_forbids(self):
+        os.environ["CRON_SECRET"] = "s3cret"
+        try:
+            response = self.client.get("/cron/send-reminders/")
+            self.assertEqual(response.status_code, 403)
+        finally:
+            os.environ.pop("CRON_SECRET", None)
+
+    @override_settings(DEBUG=False)
+    def test_wrong_auth_header_forbids(self):
+        os.environ["CRON_SECRET"] = "s3cret"
+        try:
+            response = self.client.get(
+                "/cron/send-reminders/", HTTP_AUTHORIZATION="Bearer wrong"
+            )
+            self.assertEqual(response.status_code, 403)
+        finally:
+            os.environ.pop("CRON_SECRET", None)
+
+    @override_settings(DEBUG=False)
+    def test_correct_auth_header_runs_command(self):
+        os.environ["CRON_SECRET"] = "s3cret"
+        try:
+            response = self.client.get(
+                "/cron/send-reminders/", HTTP_AUTHORIZATION="Bearer s3cret"
+            )
+            self.assertEqual(response.status_code, 200)
+            self.assertEqual(response["Content-Type"], "text/plain")
+        finally:
+            os.environ.pop("CRON_SECRET", None)
+
+    @override_settings(DEBUG=False)
+    def test_post_rejected(self):
+        os.environ["CRON_SECRET"] = "s3cret"
+        try:
+            response = self.client.post(
+                "/cron/send-reminders/", HTTP_AUTHORIZATION="Bearer s3cret"
+            )
+            self.assertNotEqual(response.status_code, 200)
+        finally:
+            os.environ.pop("CRON_SECRET", None)

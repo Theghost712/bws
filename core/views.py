@@ -6,6 +6,7 @@ from django.contrib.auth.decorators import login_required
 from django.core.management import call_command
 from django.http import HttpResponse, HttpResponseForbidden
 from django.shortcuts import redirect, render
+from django.urls import reverse
 from django.utils import timezone
 from django.views.decorators.http import require_GET
 from django.views.generic import TemplateView
@@ -110,3 +111,25 @@ def send_reminders_cron(request):
     out = StringIO()
     call_command("send_reminders", stdout=out)
     return HttpResponse(out.getvalue(), content_type="text/plain")
+
+
+@require_GET
+def robots_txt(request):
+    """Serve ``/robots.txt`` with crawl rules and the sitemap location."""
+    sitemap_url = request.build_absolute_uri(reverse("django.contrib.sitemaps.views.sitemap"))
+    lines = [
+        "User-agent: *",
+        "Allow: /",
+        "Disallow: /admin/",
+        "Disallow: /accounts/",
+        "Disallow: /birthdays/",
+        "Disallow: /reminders/",
+        "Disallow: /wishes/saved/",
+        "Disallow: /wishes/favorites/",
+        "Disallow: /cards/render/",
+        "Disallow: /cron/",
+        "",
+        f"Sitemap: {sitemap_url}",
+        "",
+    ]
+    return HttpResponse("\n".join(lines), content_type="text/plain")
