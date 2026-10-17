@@ -7,6 +7,7 @@ adjust the values for your environment.
 """
 
 import os
+import urllib.parse
 from pathlib import Path
 
 from dotenv import load_dotenv
@@ -37,8 +38,17 @@ SECRET_KEY = os.environ.get(
     "DJANGO_SECRET_KEY",
     "django-insecure-dev-only-key-change-me-in-production",
 )
-DEBUG = env_bool("DJANGO_DEBUG", True)
-ALLOWED_HOSTS = env_list("DJANGO_ALLOWED_HOSTS", ["localhost", "127.0.0.1", "[::1]"])
+DEBUG = env_bool("DJANGO_DEBUG", not bool(os.environ.get("VERCEL")))
+ALLOWED_HOSTS = env_list(
+    "DJANGO_ALLOWED_HOSTS",
+    [
+        "localhost",
+        "127.0.0.1",
+        "[::1]",
+        "bws-topaz.vercel.app",
+        ".vercel.app",
+    ],
+)
 
 INSTALLED_APPS = [
     "core",
@@ -89,8 +99,24 @@ WSGI_APPLICATION = "config.wsgi.application"
 ASGI_APPLICATION = "config.asgi.application"
 
 # ---------------------------------------------------------------------------
-# Database (SQLite locally, MySQL in production)
+# Database (SQLite locally, MySQL or Postgres in production)
 # ---------------------------------------------------------------------------
+def database_from_url(url):
+    parsed = urllib.parse.urlparse(url)
+    return {
+        "ENGINE": "django.db.backends.postgresql",
+        "NAME": parsed.path.lstrip("/"),
+        "USER": urllib.parse.unquote(parsed.username or ""),
+        "PASSWORD": urllib.parse.unquote(parsed.password or ""),
+        "HOST": parsed.hostname or "",
+        "PORT": str(parsed.port or ""),
+        "OPTIONS": {"sslmode": "require"},
+        "CONN_MAX_AGE": 0,
+    }
+
+
+DATABASE_URL = os.environ.get("POSTGRES_URL") or os.environ.get("DATABASE_URL")
+
 if os.environ.get("DB_ENGINE") == "mysql":
     DATABASES = {
         "default": {
@@ -103,6 +129,8 @@ if os.environ.get("DB_ENGINE") == "mysql":
             "OPTIONS": {"charset": "utf8mb4"},
         }
     }
+elif DATABASE_URL:
+    DATABASES = {"default": database_from_url(DATABASE_URL)}
 else:
     DATABASES = {
         "default": {
@@ -202,3 +230,18 @@ if not DEBUG:
     CSRF_TRUSTED_ORIGINS = env_list("DJANGO_CSRF_TRUSTED_ORIGINS", [])
 
 MESSAGE_STORAGE = "django.contrib.messages.storage.session.SessionStorage"
+
+# ---------------------------------------------------------------------------
+# Vercel deployment
+# ---------------------------------------------------------------------------
+if os.environ.get("VERCEL"):
+    ALLOWED_HOSTS = env_list(
+        "DJANGO_ALLOWED_HOSTS",
+        ["bws-topaz.vercel.app", ".vercel.app", "localhost", "127.0.0.1"],
+    ) + [os.environ.get("VERCEL_URL", "")]
+    ALLOWED_HOSTS = [h for h in ALLOWED_HOSTS if h]
+    CSRF_TRUSTED_ORIGINS = [
+        "https://bws-topaz.vercel.app",
+        "https://*.vercel.app",
+    ]
+    SECURE_PROXY_SSL_HEADER = ("HTTP_X_FORWARDED_PROTO", "https")
