@@ -176,6 +176,31 @@ STATIC_ROOT = BASE_DIR / "staticfiles"
 MEDIA_URL = "media/"
 MEDIA_ROOT = BASE_DIR / "media"
 
+STORAGES = {
+    "default": {"BACKEND": "django.core.files.storage.FileSystemStorage"},
+    "staticfiles": {"BACKEND": "django.contrib.staticfiles.storage.StaticFilesStorage"},
+}
+
+# Vercel's filesystem is read-only at runtime, so persisted user uploads must
+# live in object storage. Enable any S3-compatible backend (AWS S3, Cloudflare
+# R2, Backblaze B2, MinIO, ...) by setting AWS_STORAGE_BUCKET_NAME (or
+# USE_S3_MEDIA=1). Without it we fall back to local disk for development.
+USE_S3_MEDIA = env_bool("USE_S3_MEDIA", bool(os.environ.get("AWS_STORAGE_BUCKET_NAME")))
+if USE_S3_MEDIA:
+    STORAGES["default"] = {"BACKEND": "storages.backends.s3.S3Storage"}
+    AWS_ACCESS_KEY_ID = os.environ.get("AWS_ACCESS_KEY_ID", "")
+    AWS_SECRET_ACCESS_KEY = os.environ.get("AWS_SECRET_ACCESS_KEY", "")
+    AWS_STORAGE_BUCKET_NAME = os.environ.get("AWS_STORAGE_BUCKET_NAME", "")
+    AWS_S3_REGION_NAME = os.environ.get("AWS_S3_REGION_NAME", "")
+    AWS_S3_ENDPOINT_URL = os.environ.get("AWS_S3_ENDPOINT_URL", "")
+    AWS_S3_CUSTOM_DOMAIN = os.environ.get("AWS_S3_CUSTOM_DOMAIN", "")
+    AWS_S3_SIGNATURE_VERSION = os.environ.get("AWS_S3_SIGNATURE_VERSION", "s3v4")
+    AWS_S3_FILE_OVERWRITE = False
+    AWS_DEFAULT_ACL = None
+    AWS_QUERYSTRING_AUTH = env_bool("AWS_QUERYSTRING_AUTH", not bool(AWS_S3_CUSTOM_DOMAIN))
+    if AWS_S3_CUSTOM_DOMAIN:
+        MEDIA_URL = f"https://{AWS_S3_CUSTOM_DOMAIN}/"
+
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
 # ---------------------------------------------------------------------------
@@ -193,16 +218,23 @@ SITE_PHONE = os.environ.get("SITE_PHONE", "+255 747 433 510")
 SITE_BASE_URL = os.environ.get("SITE_BASE_URL", "http://127.0.0.1:8000").rstrip("/")
 
 # ---------------------------------------------------------------------------
-# Email (console backend locally, SMTP in production)
+# Email (console backend locally, SMTP automatically in production)
 # ---------------------------------------------------------------------------
-EMAIL_BACKEND = os.environ.get(
-    "EMAIL_BACKEND", "django.core.mail.backends.console.EmailBackend"
-)
+# The console backend prints emails to stdout. Set EMAIL_HOST and the SMTP
+# backend is selected automatically (override with EMAIL_BACKEND if needed).
 EMAIL_HOST = os.environ.get("EMAIL_HOST", "")
+_default_email_backend = (
+    "django.core.mail.backends.smtp.EmailBackend"
+    if EMAIL_HOST
+    else "django.core.mail.backends.console.EmailBackend"
+)
+EMAIL_BACKEND = os.environ.get("EMAIL_BACKEND", _default_email_backend)
 EMAIL_PORT = int(os.environ.get("EMAIL_PORT", "587"))
-EMAIL_USE_TLS = env_bool("EMAIL_USE_TLS", True)
+EMAIL_USE_SSL = env_bool("EMAIL_USE_SSL", False)
+EMAIL_USE_TLS = env_bool("EMAIL_USE_TLS", not EMAIL_USE_SSL)
 EMAIL_HOST_USER = os.environ.get("EMAIL_HOST_USER", "")
 EMAIL_HOST_PASSWORD = os.environ.get("EMAIL_HOST_PASSWORD", "")
+EMAIL_TIMEOUT = int(os.environ.get("EMAIL_TIMEOUT", "10"))
 DEFAULT_FROM_EMAIL = os.environ.get("DEFAULT_FROM_EMAIL", "paveline@example.com")
 
 # ---------------------------------------------------------------------------
@@ -247,3 +279,25 @@ if os.environ.get("VERCEL"):
         "https://*.vercel.app",
     ]
     SECURE_PROXY_SSL_HEADER = ("HTTP_X_FORWARDED_PROTO", "https")
+
+# ---------------------------------------------------------------------------
+# Error monitoring (optional)
+# ---------------------------------------------------------------------------
+# Set SENTRY_DSN to enable Sentry. Left disabled otherwise so local runs and
+# tests stay offline.
+SENTRY_DSN = os.environ.get("SENTRY_DSN", "")
+if SENTRY_DSN:
+    import sentry_sdk
+    from sentry_sdk.integrations.django import DjangoIntegration
+
+    sentry_sdk.init(
+        dsn=SENTRY_DSN,
+        integrations=[DjangoIntegration()],
+        environment=os.environ.get(
+            "SENTRY_ENVIRONMENT",
+            "production" if os.environ.get("VERCEL") else "development",
+        ),
+        release=os.environ.get("SENTRY_RELEASE") or os.environ.get("VERCEL_GIT_COMMIT_SHA"),
+        traces_sample_rate=float(os.environ.get("SENTRY_TRACES_SAMPLE_RATE", "0")),
+        send_default_pii=False,
+    )

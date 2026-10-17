@@ -10,5 +10,12 @@ python-bidi>=0.4
 # Production database drivers:
 psycopg[binary]>=3.2
 # mysqlclient>=2.2
+
+# Object storage for user uploads (S3-compatible: AWS S3, Cloudflare R2, ...)
+django-storages[s3]>=1.14
+
+# Error monitoring (enabled when SENTRY_DSN is set)
+sentry-sdk>=2.0
+
 # Production WSGI server (optional):
 # gunicorn>=22.0
