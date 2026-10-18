@@ -7,6 +7,7 @@ Text is wrapped to fit, long words are broken, and Arabic text is shaped with
 """
 
 import io
+import math
 import os
 import textwrap
 
@@ -175,6 +176,46 @@ def _circular_photo(photo, diameter):
     return output
 
 
+
+def _draw_floral_decoration(image, template_slug, accent_rgb, text_rgb, bg2_rgb):
+    """Draw subtle floral elements for floral/romantic templates."""
+    draw = ImageDraw.Draw(image, "RGBA")
+    w, h = image.size
+    if template_slug in ("floral-garden",):
+        # soft corner blooms
+        for cx, cy, sz in ((w*0.08, h*0.12, w*0.05), (w*0.92, h*0.88, w*0.04), (w*0.12, h*0.85, w*0.035)):
+            r = int(sz)
+            # petals
+            petal = tuple(int(c*0.8 + a*0.2) for c,a in zip(text_rgb[:3], accent_rgb[:3]))
+            petal = (*petal, 60)
+            center = (*text_rgb[:3], 90)
+            for i in range(5):
+                ang = 2*math.pi*i/5 - math.pi/2
+                x = cx + r*0.5*math.cos(ang)
+                y = cy + r*0.5*math.sin(ang)
+                draw.ellipse([x-r*0.28, y-r*0.28, x+r*0.28, y+r*0.28], fill=petal)
+            draw.ellipse([cx-r*0.18, cy-r*0.18, cx+r*0.18, cy+r*0.18], fill=center)
+    elif template_slug in ("romantic-blush",):
+        # delicate scattered blooms
+        for cx, cy, sz in ((w*0.06, h*0.08, w*0.04), (w*0.94, h*0.92, w*0.035), (w*0.10, h*0.90, w*0.03)):
+            r = int(sz)
+            petal = (*accent_rgb[:3], 40)
+            center = (*accent_rgb[:3], 70)
+            for i in range(6):
+                ang = 2*math.pi*i/6
+                x = cx + r*0.6*math.cos(ang)
+                y = cy + r*0.6*math.sin(ang)
+                draw.ellipse([x-r*0.22, y-r*0.22, x+r*0.22, y+r*0.22], fill=petal)
+            draw.ellipse([cx-r*0.16, cy-r*0.16, cx+r*0.16, cy+r*0.16], fill=center)
+    else:
+        # subtle vine-like accents for others with floral-ish feel
+        if template_slug in ("elegant-midnight", "minimalist-linen"):
+            return
+        # faint corner sprigs
+        for cx, cy in ((w*0.05, h*0.95), (w*0.95, h*0.05)):
+            draw.line([cx, cy, cx+w*0.08, cy-h*0.06] if cx<w/2 else [cx, cy, cx-w*0.08, cy+h*0.06],
+                      fill=(*accent_rgb[:3], 25), width=2)
+
 def render_card(
     template,
     *,
@@ -194,6 +235,8 @@ def render_card(
     bg2 = hex_to_rgb(template.background_secondary, (236, 213, 220))
     accent_rgb = hex_to_rgb(accent or template.accent, (189, 104, 95))
     text_rgb = hex_to_rgb(template.text_color, (75, 49, 66))
+    bg2_rgb = bg2
+
 
     image = _gradient(size, bg, bg2)
     draw = ImageDraw.Draw(image, "RGBA")
@@ -210,6 +253,7 @@ def render_card(
         outline=accent_rgb + (70,),
         width=3,
     )
+    _draw_floral_decoration(image, template.slug, accent_rgb, text_rgb, bg2)
 
     rtl = contains_arabic(heading) or contains_arabic(message)
     margin = int(width * 0.11)
