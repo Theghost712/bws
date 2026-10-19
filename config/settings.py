@@ -57,6 +57,7 @@ INSTALLED_APPS = [
     "cards",
     "birthdays",
     "reminders",
+    "portfolios",
     "django.contrib.admin",
     "django.contrib.auth",
     "django.contrib.contenttypes",

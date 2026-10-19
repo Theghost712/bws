@@ -129,3 +129,4 @@ strings fall back to English.
 | `birthdays` | Birthday manager and upcoming calculations |
 | `reminders` | Email reminders and the `send_reminders` command |
 | `accounts` | Registration, login, profile and password reset |
+| `portfolios` | Public portfolio pages (e.g. `/portfolios/`) |

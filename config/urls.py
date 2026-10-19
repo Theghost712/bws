@@ -25,6 +25,7 @@ urlpatterns = [
     path("cards/", include("cards.urls")),
     path("birthdays/", include("birthdays.urls")),
     path("reminders/", include("reminders.urls")),
+    path("portfolios/", include("portfolios.urls")),
 ]
 
 if settings.DEBUG:
